@@ -1,0 +1,83 @@
+/* main styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	background-color: #ffffff;
+}
+:root {
+	--transition: 1.75s cubic-bezier(.2, .6, 0, 1);
+}
+
+
+/* main slider styles */
+.slider {
+	height: 100%;
+}
+.slider__layer {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	/* transition: var(--transition)!important; */
+}
+
+.slider__item {
+	overflow: hidden;
+}
+.slider__wrapper {
+	will-change: transform;
+	transform-style: preserve-3d;
+	/* transition: var(--transition)!important; */
+}
+
+.swiper {
+    width: 1920px;
+    height: 1080px;
+}
+.swiper-button-next, .swiper-button-prev {
+     bottom: 59px !important;
+	 top:auto !important;
+	}
+
+	.swiper-scrollbar-drag {
+		height: 50px !important;
+		background: rgba(135, 6, 6, 0.5) !important;
+	}
+
+	.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+		bottom: 100px !important;
+		left: 50px !important;
+		width: 1160px !important;
+	}
+
+
+/* other slider styles */
+.title-text-first, .title-text-second, .title-text-third {
+	font-size: 36px;
+	opacity: 0;
+	color: azure;
+	transition: all 3s ease; /*первое срабатывание первого слайда, дальше - js*/
+	transform: translateY(200px);
+}
+
+.tree-image-block {
+	width:300px; 
+	height:auto;
+	position: absolute;
+	top: 10px;
+    z-index: 10;
+}
+
+.tree-image-intern, .tree-image-junior, .tree-image-middle, .tree-image-senior {
+	width:300px; 
+	position: absolute;
+	top: 100px;
+	opacity: 0;
+	transition: all 3s ease;
+}
+
