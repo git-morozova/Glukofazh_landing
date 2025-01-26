@@ -6,41 +6,45 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Document</title>
+	<title>Исследование UKPDS</title>
 
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
-	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
-	<script src="libs/particles/particles.js" defer></script>
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>	
 
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/app.js" defer></script>
+
+
 
 </head>
 <body>
 
 	<div class="swiper slider">
+		
+		<!--moving elements-->	
 		<div class="swiper-wrapper slider__wrapper">
 
-			<div class="swiper-slide slider__item ">
+			<div class="swiper-slide slider__item " data-history="slide0">
 				<div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(img/screen-1/back.png);"></div>
 				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/screen-1/back_mid.png);"></div>
-				<div class="title-text-first">1977</div>
+				<div class="title-text">slide0</div>
 			</div>
 
-			<div class="swiper-slide slider__item">
+			<div class="swiper-slide slider__item" data-history="slide1">
 				<div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(img/screen-1/back.png);"></div>
 				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/screen-1/back_mid.png);"></div>
-				<div class="title-text-second">1997</div>
+				<div class="title-text">slide1</div>
 			</div>
 
-			<div class="swiper-slide slider__item">
+			<div class="swiper-slide slider__item" data-history="slide2">
 				<div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(img/screen-1/back.png);"></div>
 				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/screen-1/back_mid.png);"></div>
-				<div class="title-text-third" >789</div>
+				<div class="title-text" >slide2</div>
 			</div>
 
 		</div>
-		
+
+		<!--position: absolute elements-->		
 		<div class="fix">
 			<div class="leaf-image-block">
 				<img class="leaf-image-first" src="img/leaves/leaf8.png">
@@ -58,7 +62,10 @@
 		<div class="swiper-button-next"></div>
 	
 		<!--Scrollbar-->
-		<div class="swiper-scrollbar"></div>
+		<div class="swiper-scrollbar">
+			<div class="swiper-scrollbar-drag" style="width: 543.934px; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"></div>
+		</div>
+
 	</div>
 	
 </body>

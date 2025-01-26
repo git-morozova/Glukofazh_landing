@@ -39,28 +39,47 @@ html, body {
     width: 1920px;
     height: 1080px;
 }
+
+/*стрелки скролла*/
 .swiper-button-next, .swiper-button-prev {
      bottom: 59px !important;
 	 top:auto !important;
 	}
 
+	/*ползунок*/
 	.swiper-scrollbar-drag {
-		height: 50px !important;
-		background: rgba(135, 6, 6, 0.5) !important;
+		width: 268px !important;
+		height: 30px !important;
+		border-radius: 23px;
+		margin: 3px;
+		background: #CBD4E9 !important;
+		cursor: grab;
+		overflow: auto;
+		
+
+
 	}
 
+
+	/* фон скроллбара*/
 	.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-		bottom: 100px !important;
-		left: 50px !important;
-		width: 1160px !important;
+		bottom: 0px !important;
+		left: 139px  !important;
+		width: 1642px !important;
+		height: 37px !important;
+		background: rgba(0, 0, 0, 0) !important;
+		
+		border-radius: 23px !important;
+		border: 1px solid  #325299;
+
 	}
 
 
 /* other slider styles */
-.title-text-first, .title-text-second, .title-text-third {
+.title-text {
 	font-size: 36px;
-	opacity: 0;
-	color: azure;
+	opacity: 1;
+	color: rgb(0, 0, 0);
 	transition: all 3s ease; /*первое срабатывание первого слайда, дальше - js*/
 	transform: translateY(200px);
 }
