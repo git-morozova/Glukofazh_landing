@@ -1,18 +1,48 @@
+// пропишем элемент play на скролле
+let renderPlayScroll = function () {	
+	document.querySelector('.swiper-scrollbar-drag').innerHTML = "";
+	var source = document.createElement('img');
+	source.src = 'img/icons/play_scroll.svg';
+	var destination = document.querySelector('.swiper-scrollbar-drag');
+	destination.appendChild(source);
+}
+
+window.onload = function() {
+	renderPlayScroll();	
+	
+	
+	document.querySelector(".swiper-button-next").style.opacity = 0;
+	document.querySelector(".swiper-button-prev").style.opacity = 0;
+	
+};
+
 // все анимации, запускающиеся в момент начала смены слайда
 let changeStart = function (slide) {
-
 	const swiper = document.querySelector('.swiper').swiper;
 	const bar = document.querySelector(".swiper-scrollbar-drag"); 
+	renderPlayScroll();		
+	bar.className = "swiper-scrollbar-drag"
+
 
 
 	if(swiper.activeIndex == 0){
 		bar.style.transform = "translate3d(0px, 0px, 0px)"
-	}
-	if(swiper.activeIndex == 1){
-		bar.style.transform = "translate3d(200px, 0px, 0px)"
-	}
-	if(swiper.activeIndex == 2){
+	} else if(swiper.activeIndex == 1){
+		bar.style.transform = "translate3d(100px, 0px, 0px)"
+	} else if(swiper.activeIndex == 2){
 		bar.style.transform = "translate3d(400px, 0px, 0px)"
+	} else if(swiper.activeIndex == 3){
+		bar.style.transform = "translate3d(700px, 0px, 0px)"
+	} else if(swiper.activeIndex == 4){
+		bar.style.transform = "translate3d(750px, 0px, 0px)"
+	} else if(swiper.activeIndex == 5){
+		bar.style.transform = "translate3d(1100px, 0px, 0px)"
+	} else if(swiper.activeIndex == 6){
+		bar.style.transform = "translate3d(1150px, 0px, 0px)"
+	} else if(swiper.activeIndex == 7){
+		bar.style.transform = "translate3d(1200px, 0px, 0px)"
+	} else if(swiper.activeIndex == 8){
+		bar.style.transform = "translate3d(1366px, 0px, 0px)"
 	}
 
 	fadeCurrentSlide(slide);
@@ -23,9 +53,29 @@ let changeEnd = function (activeSlide) {
 	showNewSlide(activeSlide);
 }
 
+//появление стрелок навигации
+let toggleArrows = function (activeSlide) {
+	let h1 = activeSlide.querySelector(".title-text").textContent;
+	if (h1 == "slide0" || h1 == "slide8") {
+		document.querySelector(".swiper-button-next").style.opacity = 0;
+		document.querySelector(".swiper-button-prev").style.opacity = 0;
+	} else {
+		document.querySelector(".swiper-button-next").style.opacity = 1;
+		document.querySelector(".swiper-button-prev").style.opacity = 1;
+
+	}
+
+
+}
+
 //анимации исчезновения контента
 let fadeCurrentSlide = function (slide) {
 	let h1 = slide.querySelector(".title-text").textContent;
+
+
+		
+
+
 
 	if (h1 == "slide0") {
 		document.querySelector(".tree-image-intern").style.opacity = 0;
@@ -38,12 +88,37 @@ let fadeCurrentSlide = function (slide) {
 //анимации появления контента
 let showNewSlide = function (activeSlide) {
 	let h1 = activeSlide.querySelector(".title-text").textContent;
+	toggleArrows(activeSlide);
 
 	if (h1 == "slide0") {
 		document.querySelector(".tree-image-intern").style.opacity = 1;
+		renderPlayScroll();
+
 	}
 	if (h1 == "slide1") {
 		document.querySelector(".tree-image-junior").style.opacity = 1;
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "1977";
+	}
+	if (h1 == "slide2") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "1997";
+	}
+	if (h1 == "slide3") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2007";
+	}
+	if (h1 == "slide4") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2007";
+	}
+	if (h1 == "slide5") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2024";
+	}
+	if (h1 == "slide6") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2024";
+	}
+	if (h1 == "slide7") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2024";
+	}
+	if (h1 == "slide8") {
+		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2024";
 	}
 }
 
@@ -61,7 +136,7 @@ new Swiper('.slider', {
 		enabled: true,
 		sensitivity: 2.4
 	},
-	simulateTouch:true,
+	/*simulateTouch:true,*/
 	hashNavigation: true,
 	on: {
 		init: function () { 
@@ -76,51 +151,53 @@ new Swiper('.slider', {
 	
 		slideChangeTransitionStart: function() {
 			this.slides.forEach(slide => {
-				changeStart(slide);		
+				changeStart(slide);	
+				let activeSlide = this.slides[this.activeIndex];
+				toggleArrows(activeSlide);		
 			})
 		},
 	
 		slideChangeTransitionEnd: function() {			
 			let activeSlide = this.slides[this.activeIndex];
 			changeEnd(activeSlide);		
-		},			
-
-		/*scrollbarDragMove*/
+		},	
 
 		scrollbarDragStart: function() {
 			this.slides.forEach(slide => {
 				fadeCurrentSlide(slide);		
 			})
+			
 		},
 
-		scrollbarDragEnd: function() {
-			/*исправляем положение ползунка по ключевым кадрам при перетаскивании мышкой*/
+
+
+
+
+
+		scrollbarDragMove: function() {
 			dropPosition = document.querySelector(".swiper-scrollbar-drag").style.transform;			
-			dropPositionX = Number(dropPosition.substring(12, dropPosition.indexOf("px"))); //вытаскиваем положение ползунка по Х при дропе
+			dropPositionX = Number(dropPosition.substring(12, dropPosition.indexOf("px"))); //вытаскиваем положение ползунка по Х при перемещении
+			renderPlayScroll();
 
+
+		
+			//убираем баг с выезжающим за пределы скроллбара ползунком
 			const bar = document.querySelector(".swiper-scrollbar-drag"); 
-			let newCurrentSlider = document.querySelector('.swiper').swiper;
-			
-
-			if (dropPositionX < 100) {
-				newCurrentSlider.activeIndex = 0
-				bar.style.transform = "translate3d(0px, 0px, 0px)"
-			} else if (dropPositionX < 300 && dropPositionX >= 100) {
-				newCurrentSlider.activeIndex = 1
-				bar.style.transform = "translate3d(200px, 0px, 0px)"
-			} else if (dropPositionX < 500 && dropPositionX >= 300) {
-				newCurrentSlider.activeIndex = 2
-				bar.style.transform = "translate3d(400px, 0px, 0px)"
+			if(dropPositionX > 1360) {
+				bar.className = "swiper-scrollbar-drag bar-end"
 			} else {
-				newCurrentSlider.activeIndex = 2
-				bar.style.transform = "translate3d(1400px, 0px, 0px)"
-			} 
+				bar.className = "swiper-scrollbar-drag"
+			}
+	
 
+		},
+		
+
+		scrollbarDragEnd: function() {
+				
 			let activeSlide = this.slides[this.activeIndex];
 			showNewSlide(activeSlide);	
-
-		}
-		
+		}		
 	},
 
 	direction: 'horizontal',
@@ -133,10 +210,10 @@ new Swiper('.slider', {
 		// Makes the Scrollbar Draggable
 		draggable: true,
 		// Snaps slider position to slides when you release Scrollbar
-		snapOnRelease: true,
+		/*snapOnRelease: true,*/
 		// Size (Length) of Scrollbar Draggable Element in px
-		dragSize: 'auto',
-	  },
+		/*dragSize: 'auto',*/
+	},
 
 	  	// Navigation Arrows
 	navigation: {
@@ -144,7 +221,7 @@ new Swiper('.slider', {
 		prevEl: '.swiper-button-prev',
 		hideOnClick: false,
 	},
-	centeredSlides: true,
+	/*centeredSlides: true,*/
 	
 });
 
@@ -229,7 +306,7 @@ document.addEventListener('keydown', (event) => {
 */
 
 
-
+/*
 
 //двигаем скроллбар
 let moveBarRight = function () {
@@ -255,7 +332,7 @@ let moveBarLeft = function () {
 	}
 }
 
-
+*/
 
 
 

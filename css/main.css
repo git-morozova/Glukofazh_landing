@@ -44,7 +44,17 @@ html, body {
 .swiper-button-next, .swiper-button-prev {
      bottom: 59px !important;
 	 top:auto !important;
+	 /*opacity: 0 !important;*/
 	}
+
+	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+		opacity: 0 !important;
+	}
+
+	.bar-end {
+		transform: translate3d(1366px, 0px, 0px) !important;
+	}
+
 
 	/*ползунок*/
 	.swiper-scrollbar-drag {
@@ -100,3 +110,15 @@ html, body {
 	transition: all 3s ease;
 }
 
+
+.swiper-scrollbar-drag {
+	color: #325299;
+	font-family: Roboto, Arial, sans-serif;
+	padding-top: 6px;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+text-align: center;
+
+
+}
