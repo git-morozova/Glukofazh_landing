@@ -8,8 +8,7 @@ let renderPlayScroll = function () {
 }
 
 window.onload = function() {
-	renderPlayScroll();	
-	
+	renderPlayScroll();		
 	
 	document.querySelector(".swiper-button-next").style.opacity = 0;
 	document.querySelector(".swiper-button-prev").style.opacity = 0;
@@ -72,11 +71,6 @@ let toggleArrows = function (activeSlide) {
 let fadeCurrentSlide = function (slide) {
 	let h1 = slide.querySelector(".title-text").textContent;
 
-
-		
-
-
-
 	if (h1 == "slide0") {
 		document.querySelector(".tree-image-intern").style.opacity = 0;
 	}
@@ -93,7 +87,6 @@ let showNewSlide = function (activeSlide) {
 	if (h1 == "slide0") {
 		document.querySelector(".tree-image-intern").style.opacity = 1;
 		renderPlayScroll();
-
 	}
 	if (h1 == "slide1") {
 		document.querySelector(".tree-image-junior").style.opacity = 1;
@@ -137,7 +130,7 @@ new Swiper('.slider', {
 		sensitivity: 2.4
 	},
 	/*simulateTouch:true,*/
-	hashNavigation: true,
+	/*hashNavigation: true,*/
 	on: {
 		init: function () { 
 			// первая загрузка слайдера

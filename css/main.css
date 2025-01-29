@@ -42,10 +42,28 @@ html, body {
 
 /*стрелки скролла*/
 .swiper-button-next, .swiper-button-prev {
-     bottom: 59px !important;
+     bottom: 1px !important;
 	 top:auto !important;
-	 /*opacity: 0 !important;*/
+	 z-index: 53;
+	 width: 35px;
+	 height: 35px;
+	 background-color: #6d83a9;
+	 color: #ffffff;
+	 border-radius: 35px;
+	 font-size: 10px;
+line-height: 13px;
+font-family: "Roboto", Arial, sans-serif;
+font-weight: 300;
 	}
+
+	.swiper-button-prev {
+		left: 139px;
+		
+	   }
+	   .swiper-button-next {
+		right: 139px;
+		
+	   }
 
 	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
 		opacity: 0 !important;
@@ -55,6 +73,10 @@ html, body {
 		transform: translate3d(1366px, 0px, 0px) !important;
 	}
 
+	.swiper-button-prev:after, .swiper-button-next:after {
+		content: '' !important;
+
+	}
 
 	/*ползунок*/
 	.swiper-scrollbar-drag {
@@ -62,9 +84,16 @@ html, body {
 		height: 30px !important;
 		border-radius: 23px;
 		margin: 3px;
-		background: #CBD4E9 !important;
+		background: #ccd3e1 !important;
 		cursor: grab;
 		overflow: auto;
+		color: #536ca4;
+		font-family: "Roboto", Arial, sans-serif;
+		padding-top: 4px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
 		
 
 
@@ -80,9 +109,10 @@ html, body {
 		background: rgba(0, 0, 0, 0) !important;
 		
 		border-radius: 23px !important;
-		border: 1px solid  #325299;
+		border: 1px solid  #5971a2;
 
 	}
+
 
 
 /* other slider styles */
@@ -108,17 +138,4 @@ html, body {
 	top: 100px;
 	opacity: 0;
 	transition: all 3s ease;
-}
-
-
-.swiper-scrollbar-drag {
-	color: #325299;
-	font-family: Roboto, Arial, sans-serif;
-	padding-top: 6px;
-font-size: 18px;
-font-weight: 700;
-line-height: 22px;
-text-align: center;
-
-
 }
