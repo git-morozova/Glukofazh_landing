@@ -9,10 +9,8 @@ let renderPlayScroll = function () {
 
 window.onload = function() {
 	renderPlayScroll();		
-	
 	document.querySelector(".swiper-button-next").style.opacity = 0;
-	document.querySelector(".swiper-button-prev").style.opacity = 0;
-	
+	document.querySelector(".swiper-button-prev").style.opacity = 0;	
 };
 
 // все анимации, запускающиеся в момент начала смены слайда
@@ -21,8 +19,6 @@ let changeStart = function (slide) {
 	const bar = document.querySelector(".swiper-scrollbar-drag"); 
 	renderPlayScroll();		
 	bar.className = "swiper-scrollbar-drag"
-
-
 
 	if(swiper.activeIndex == 0){
 		bar.style.transform = "translate3d(0px, 0px, 0px)"
@@ -63,18 +59,16 @@ let toggleArrows = function (activeSlide) {
 		document.querySelector(".swiper-button-prev").style.opacity = 1;
 
 	}
-
-
 }
 
 //анимации исчезновения контента
 let fadeCurrentSlide = function (slide) {
 	let h1 = slide.querySelector(".title-text").textContent;
 
-	if (h1 == "slide0") {
+	if (h1 == "slide1") {
 		document.querySelector(".tree-image-intern").style.opacity = 0;
 	}
-	if (h1 == "slide1") {
+	if (h1 == "slide2") {
 		document.querySelector(".tree-image-junior").style.opacity = 0;
 	}
 }
@@ -85,14 +79,14 @@ let showNewSlide = function (activeSlide) {
 	toggleArrows(activeSlide);
 
 	if (h1 == "slide0") {
-		document.querySelector(".tree-image-intern").style.opacity = 1;
 		renderPlayScroll();
 	}
 	if (h1 == "slide1") {
-		document.querySelector(".tree-image-junior").style.opacity = 1;
+		document.querySelector(".tree-image-intern").style.opacity = 1;
 		document.querySelector('.swiper-scrollbar-drag').innerHTML = "1977";
 	}
 	if (h1 == "slide2") {
+		document.querySelector(".tree-image-junior").style.opacity = 1;
 		document.querySelector('.swiper-scrollbar-drag').innerHTML = "1997";
 	}
 	if (h1 == "slide3") {
@@ -114,7 +108,6 @@ let showNewSlide = function (activeSlide) {
 		document.querySelector('.swiper-scrollbar-drag').innerHTML = "2024";
 	}
 }
-
 
 
 
@@ -162,17 +155,10 @@ new Swiper('.slider', {
 			
 		},
 
-
-
-
-
-
 		scrollbarDragMove: function() {
 			dropPosition = document.querySelector(".swiper-scrollbar-drag").style.transform;			
 			dropPositionX = Number(dropPosition.substring(12, dropPosition.indexOf("px"))); //вытаскиваем положение ползунка по Х при перемещении
 			renderPlayScroll();
-
-
 		
 			//убираем баг с выезжающим за пределы скроллбара ползунком
 			const bar = document.querySelector(".swiper-scrollbar-drag"); 
@@ -181,13 +167,9 @@ new Swiper('.slider', {
 			} else {
 				bar.className = "swiper-scrollbar-drag"
 			}
-	
+		},		
 
-		},
-		
-
-		scrollbarDragEnd: function() {
-				
+		scrollbarDragEnd: function() {				
 			let activeSlide = this.slides[this.activeIndex];
 			showNewSlide(activeSlide);	
 		}		
@@ -232,19 +214,7 @@ function onMouse(event) {
 	event.preventDefault();
     console.log(event.type + ", " + event.target);
 }
-
-
 */
-
-
-
-
-
-
-
-
-
-
 
 
 /*стрелки навигации*/
@@ -253,7 +223,6 @@ const nextBtn = document.querySelector('.swiper-button-next');
 const prevBtn = document.querySelector('.swiper-button-prev');
 const swiper = document.querySelector('.swiper').swiper;
 const bar = document.querySelector(".swiper-scrollbar-drag"); 
-
 
 nextBtn.addEventListener('click', function() {
 	swiper.slideNext();
@@ -300,7 +269,6 @@ document.addEventListener('keydown', (event) => {
 
 
 /*
-
 //двигаем скроллбар
 let moveBarRight = function () {
 	if(swiper.activeIndex == 0){
@@ -324,11 +292,7 @@ let moveBarLeft = function () {
 		bar.style.transform = "translate3d(400px, 0px, 0px)"
 	}
 }
-
 */
-
-
-
 
 
 /*
@@ -337,4 +301,4 @@ bar.addEventListener("mousemove", mouseMoving, false);
 function mouseMoving(e) {
     console.log(e.clientX + " " + e.clientY);
 }
-	*/
+*/
