@@ -7,10 +7,37 @@ let renderPlayScroll = function () {
 	destination.appendChild(source);
 }
 
+
+
+
+
+
+
+// первичная анимация - слайд 0
+let renderZeroSlide = () => {
+	document.querySelector(".center-container").style.transform = "translate3d(322px, 30px, 0px) scale(0.87)"; // центральный блок с числом 42
+	document.querySelector(".info-container").style.cssText = "transition-delay: 1s; opacity: 1"; // правый блок с текстом про 42
+	document.querySelector(".slide0_layer3__main").style.transform = "translate3d(-111px, 38px, 0px) scale(1)"; // росток
+	document.querySelector(".main-container").style.cssText = "opacity: 1"; // заг
+	document.querySelector(".slide0_layer4__leaf1").style.transform = "translate3d(0px, 0px, 0px)"; // правый лист
+	document.querySelector(".slide0_layer5__leaf2").style.transform = "translate3d(0px, 0px, 0px)"; // левый лист
+	document.querySelector(".slide0_layer5__leaf3").style.transform = "translate3d(0px, 0px, 0px)"; // центральный лист
+	document.querySelector(".slide0_layer3__nuts").style.cssText = "opacity: 1"; // желуди
+	document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 1"; // кружок с пульсацией
+	document.querySelector(".slide0_layer3__circle-out").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация
+	document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 1"; // линии
+	document.querySelector(".slide0_layer5__line-top_mask").style.cssText = "transition-delay: 5s; opacity: 0.5"; // линии
+	
+}
+
+// анимация при первой загрузке страницы
 window.onload = function() {
 	renderPlayScroll();		
 	document.querySelector(".swiper-button-next").style.opacity = 0;
 	document.querySelector(".swiper-button-prev").style.opacity = 0;	
+	renderZeroSlide();	
+
+	
 };
 
 // все анимации, запускающиеся в момент начала смены слайда
@@ -67,6 +94,15 @@ let fadeCurrentSlide = function (slide) {
 
 	if (h1 == "slide1") {
 		document.querySelector(".tree-image-intern").style.opacity = 0;
+		document.querySelector(".center-container").style.transform = "translate3d(600px, 43px, 0px) scale(1)"; // центральный блок с числом 42
+		document.querySelector(".info-container").style.cssText = "transition-delay: 0s; opacity: 0"; // правый блок с текстом про 42
+		document.querySelector(".slide0_layer3__main").style.transform = "translate3d(0px, 0px, 0px) scale(1.12)"; // росток
+		document.querySelector(".main-container").style.cssText = "opacity: 0"; // заг	
+		document.querySelector(".slide0_layer3__nuts").style.cssText = "opacity: 0"; // желуди
+		document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
+		document.querySelector(".slide0_layer3__circle-out").style.cssText = "opacity: 0"; // пульсация
+		document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 0"; // линии
+		document.querySelector(".slide0_layer5__line-top_mask").style.cssText = "transition-delay: 5s; opacity: 0"; // линии
 	}
 	if (h1 == "slide2") {
 		document.querySelector(".tree-image-junior").style.opacity = 0;
@@ -80,6 +116,7 @@ let showNewSlide = function (activeSlide) {
 
 	if (h1 == "slide0") {
 		renderPlayScroll();
+		renderZeroSlide();
 	}
 	if (h1 == "slide1") {
 		document.querySelector(".tree-image-intern").style.opacity = 1;
@@ -129,10 +166,10 @@ new Swiper('.slider', {
 			// первая загрузка слайдера
 
 			// анимация дерева
-			let tree = document.querySelector(".tree-image-intern");
+			/*let tree = document.querySelector(".leaf-image-first");
 			if (tree) {
 				tree.style.opacity = 1;
-			}
+			}*/
 		},
 	
 		slideChangeTransitionStart: function() {
@@ -199,6 +236,16 @@ new Swiper('.slider', {
 	/*centeredSlides: true,*/
 	
 });
+
+
+
+
+
+
+
+
+
+
 
 
 

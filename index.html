@@ -24,24 +24,100 @@
 </head>
 <body>
 
-	<header class="container">
-		<img class="header-logo" src="img/logos/logo_top.svg" alt="лого">
-		<!--<nav>
-		  <ul><li>Навигация 1</li><li>Навигация 2</li><li>Навигация 3</li></ul>
-		</nav>-->	
+	<!--header-->
+	<header class="container header-main">
+		<div class="header-left">
+			<img class="header-logo" src="img/logos/logo_top.svg" alt="лого">
+		</div>
+		<!--<nav class="header-right">
+		  <ul>
+			<li><a href="#">Удобство</a></li>
+			<li><a href="#">Эффективность</a></li>
+			<li><a href="#">Безопасность и&nbsp;переносимость</a></li>
+		</ul>
+		</nav>-->
 	</header>
 
+	<!--main-->
 	<main class="container">
 		<section>		  
 		  <div class="swiper slider">
 		
 			<!--moving elements-->	
 			<div class="swiper-wrapper slider__wrapper">
-	
+
 				<div class="swiper-slide slider__item " data-history="slide0">
-					<div class="slider__layer" data-swiper-parallax="55%" style="background-image: url(img/screen-1/back.png);"></div>
-					<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/screen-1/back_mid.png);"></div>
-					<div class="title-text">slide0</div>
+
+					<div class="slider__layer slide0_layer1" data-swiper-parallax="85%">
+						<div class="title-text">slide0</div>
+					</div>
+					<div class="slider__layer slide0_layer5" data-swiper-parallax="65%">
+						<img class="slide0_layer5__leaf2" src="img/leaves/leaf2.png" alt="лист">
+						<img class="slide0_layer5__leaf3" src="img/leaves/leaf3.png" alt="лист">						
+					</div>
+					<div class="slider__layer slide0_layer3" data-swiper-parallax="35%">
+						<img class="slide0_layer3__main" src="img/screen-0/center_pic.png" alt="росток">
+
+						<div class="slide0_layer3__circle">							
+							<img class="slide0_layer3__circle-img" src="img/screen-0/circle.svg" alt="кружок">
+							<div class="slide0_layer3__circle-out">
+								<div class="circle" style="animation-delay: -6.0s"></div>
+								<div class="circle" style="animation-delay: -5.5s"></div>
+								<div class="circle" style="animation-delay: -5.0s"></div>
+								<div class="circle" style="animation-delay: -4.5s"></div>
+								<div class="circle" style="animation-delay: -4.0s"></div>
+								<div class="circle" style="animation-delay: -3.5s"></div>
+								<div class="circle" style="animation-delay: -3.0s"></div>
+								<div class="circle" style="animation-delay: -2.5s"></div>
+								<div class="circle" style="animation-delay: -2.0s"></div>
+								<div class="circle" style="animation-delay: -1.5s"></div>
+								<div class="circle" style="animation-delay: -1.0s"></div>
+								<div class="circle" style="animation-delay: -0.5s"></div>
+								<div class="circle" style="animation-delay: 0s"></div>
+							</div>
+						</div>
+
+						<div class="slide0_layer5__lines">
+							<img class="slide0_layer5__line-top" src="img/screen-0/line1.png" alt="линия">
+							<img class="slide0_layer5__line-top_mask" src="img/screen-0/line1_mask.png" alt="линия-маска">
+							<img class="slide0_layer5__line-bottom" src="img/screen-0/line2.png" alt="линия">
+						</div>
+
+					</div>
+					<div class="slider__layer slide0_layer4" data-swiper-parallax="25%">
+						<img class="slide0_layer4__leaf1" src="img/leaves/leaf1.png" alt="лист">
+						<img class="slide0_layer3__nuts" src="img/screen-0/nuts.png" alt="орехи">
+					</div>
+					
+					<div class="top-container">
+						<div class="main-container">
+							<div class="main-container-title">
+								<hi class="main-title">Исследование</hi>
+								<hi class="main-title-abbr">UKPDS</hi>
+								<div class="main-text-top">The United Kingdom Prospective Diabetes Study</div>
+								<div class="main-text-bottom">Британское Проспективное исследование сахарного диабета</div>
+							</div>
+						</div>
+						<div class="center-container">
+							<div class="center-year">
+								<div class="year">42</div>
+								<div class="year-text">года</div>
+							</div>
+							<div class="center-text">
+								изучения<br>сахарного диабета
+							</div>
+						</div>
+						<div class="info-container">
+							<div class="info-header">
+								42-летнее наблюдение UKPDS подчеркивает 
+							</div>
+							<div class="info-text">
+								необходимость раннего строгого контроля гликемии сразу после постановки диагноза сахарного диабета 2&nbsp;типа, 
+								особенно при&nbsp;приеме метформина, для&nbsp;снижения пожизненного риска осложнений и&nbsp;смерти, связанных с&nbsp;диабетом 2&nbsp;типа
+							</div>
+						</div>
+					</div>
+					
 				</div>
 	
 				<div class="swiper-slide slider__item" data-history="slide1">
@@ -96,9 +172,6 @@
 	
 			<!--position: absolute elements-->		
 			<div class="fix">
-				<div class="leaf-image-block">
-					<img class="leaf-image-first" src="img/leaves/leaf8.png" alt="лист">
-				</div>
 				<div class="tree-image-block">
 					<img class="tree-image-intern" src="img/tree/1.png" alt="дерево">
 					<img class="tree-image-junior" src="img/tree/2.png" alt="дерево">
@@ -118,13 +191,14 @@
 		</section>
 	</main>
 
+	<!--footer-->
 	<footer class="container footer-main">
 		<div class="footer-left">
 			<img class="footer-logo" src="img/logos/merck.svg" alt="лого">
 		</div>
 		<div class="footer-right">
 			СД – сахарный диабет; UKPDS –  проспективное исследование диабета в Соединенном Королевстве
-<br>
+			<br>
 			1. Adler AI, Coleman RL, Leal J, Whiteley WN, Clarke P, Holman RR. Post-trial monitoring of a randomised controlled trial of intensive glycaemic control in type 2 diabetes extended from 10 years to 24 years (UKPDS 91). Lancet. https://doi.org/10.1016/S0140-6736(24)00537-3
 			</div>		
 	</footer>	
