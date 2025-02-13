@@ -1,5 +1,5 @@
 // пропишем элемент play на скролле
-let renderPlayScroll = function () {	
+let renderPlayScroll = function () {
 	document.querySelector('.swiper-scrollbar-drag').innerHTML = "";
 	var source = document.createElement('img');
 	source.src = 'img/icons/play_scroll.svg';
@@ -8,16 +8,11 @@ let renderPlayScroll = function () {
 }
 
 
-
-
-
-
-
 // первичная анимация - слайд 0
 let renderZeroSlide = () => {
-	document.querySelector(".center-container").style.transform = "translate3d(322px, 30px, 0px) scale(0.87)"; // центральный блок с числом 42
+	document.querySelector(".center-container").style.transform = "translate3d(324px, -1px, 0px) scale(0.87)"; // центральный блок с числом 42
 	document.querySelector(".info-container").style.cssText = "transition-delay: 1s; opacity: 1"; // правый блок с текстом про 42
-	document.querySelector(".slide0_layer3__main").style.transform = "translate3d(-111px, 38px, 0px) scale(1)"; // росток
+	document.querySelector(".slide0_layer3__main").style.transform = "translate3d(-98px, 33px, 0px) scale(1.02)"; // росток
 	document.querySelector(".main-container").style.cssText = "opacity: 1"; // заг
 	document.querySelector(".slide0_layer4__leaf1").style.transform = "translate3d(0px, 0px, 0px)"; // правый лист
 	document.querySelector(".slide0_layer5__leaf2").style.transform = "translate3d(0px, 0px, 0px)"; // левый лист
@@ -26,44 +21,46 @@ let renderZeroSlide = () => {
 	document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 1"; // кружок с пульсацией
 	document.querySelector(".slide0_layer3__circle-out").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация
 	document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 1"; // линии
-	document.querySelector(".slide0_layer5__line-top_mask").style.cssText = "transition-delay: 5s; opacity: 0.5"; // линии
-	
+	setTimeout(function () {
+		document.querySelector(".slide0_layer5__line-top").classList.add("move-img"); // для двойной анимации линий
+	}, 10000)
+
 }
 
 // анимация при первой загрузке страницы
-window.onload = function() {
-	renderPlayScroll();		
+window.onload = function () {
+	renderPlayScroll();
 	document.querySelector(".swiper-button-next").style.opacity = 0;
-	document.querySelector(".swiper-button-prev").style.opacity = 0;	
-	renderZeroSlide();	
+	document.querySelector(".swiper-button-prev").style.opacity = 0;
+	renderZeroSlide();
 
-	
+
 };
 
 // все анимации, запускающиеся в момент начала смены слайда
 let changeStart = function (slide) {
 	const swiper = document.querySelector('.swiper').swiper;
-	const bar = document.querySelector(".swiper-scrollbar-drag"); 
-	renderPlayScroll();		
+	const bar = document.querySelector(".swiper-scrollbar-drag");
+	renderPlayScroll();
 	bar.className = "swiper-scrollbar-drag"
 
-	if(swiper.activeIndex == 0){
+	if (swiper.activeIndex == 0) {
 		bar.style.transform = "translate3d(0px, 0px, 0px)"
-	} else if(swiper.activeIndex == 1){
+	} else if (swiper.activeIndex == 1) {
 		bar.style.transform = "translate3d(100px, 0px, 0px)"
-	} else if(swiper.activeIndex == 2){
+	} else if (swiper.activeIndex == 2) {
 		bar.style.transform = "translate3d(400px, 0px, 0px)"
-	} else if(swiper.activeIndex == 3){
+	} else if (swiper.activeIndex == 3) {
 		bar.style.transform = "translate3d(700px, 0px, 0px)"
-	} else if(swiper.activeIndex == 4){
+	} else if (swiper.activeIndex == 4) {
 		bar.style.transform = "translate3d(750px, 0px, 0px)"
-	} else if(swiper.activeIndex == 5){
+	} else if (swiper.activeIndex == 5) {
 		bar.style.transform = "translate3d(1100px, 0px, 0px)"
-	} else if(swiper.activeIndex == 6){
+	} else if (swiper.activeIndex == 6) {
 		bar.style.transform = "translate3d(1150px, 0px, 0px)"
-	} else if(swiper.activeIndex == 7){
+	} else if (swiper.activeIndex == 7) {
 		bar.style.transform = "translate3d(1200px, 0px, 0px)"
-	} else if(swiper.activeIndex == 8){
+	} else if (swiper.activeIndex == 8) {
 		bar.style.transform = "translate3d(1366px, 0px, 0px)"
 	}
 
@@ -71,7 +68,7 @@ let changeStart = function (slide) {
 }
 
 // все анимации, запускающиеся в момент завершения смены слайда
-let changeEnd = function (activeSlide) {	
+let changeEnd = function (activeSlide) {
 	showNewSlide(activeSlide);
 }
 
@@ -102,7 +99,6 @@ let fadeCurrentSlide = function (slide) {
 		document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
 		document.querySelector(".slide0_layer3__circle-out").style.cssText = "opacity: 0"; // пульсация
 		document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 0"; // линии
-		document.querySelector(".slide0_layer5__line-top_mask").style.cssText = "transition-delay: 5s; opacity: 0"; // линии
 	}
 	if (h1 == "slide2") {
 		document.querySelector(".tree-image-junior").style.opacity = 0;
@@ -153,8 +149,8 @@ new Swiper('.slider', {
 	speed: 1200,
 	parallax: true,
 	spaceBetween: 18,
-	centeredSlides:false,
-	loop:false,
+	centeredSlides: false,
+	loop: false,
 	mousewheel: {
 		enabled: true,
 		sensitivity: 2.4
@@ -162,7 +158,7 @@ new Swiper('.slider', {
 	/*simulateTouch:true,*/
 	/*hashNavigation: true,*/
 	on: {
-		init: function () { 
+		init: function () {
 			// первая загрузка слайдера
 
 			// анимация дерева
@@ -171,45 +167,45 @@ new Swiper('.slider', {
 				tree.style.opacity = 1;
 			}*/
 		},
-	
-		slideChangeTransitionStart: function() {
+
+		slideChangeTransitionStart: function () {
 			this.slides.forEach(slide => {
-				changeStart(slide);	
+				changeStart(slide);
 				let activeSlide = this.slides[this.activeIndex];
-				toggleArrows(activeSlide);		
+				toggleArrows(activeSlide);
 			})
 		},
-	
-		slideChangeTransitionEnd: function() {			
+
+		slideChangeTransitionEnd: function () {
 			let activeSlide = this.slides[this.activeIndex];
-			changeEnd(activeSlide);		
-		},	
-
-		scrollbarDragStart: function() {
-			this.slides.forEach(slide => {
-				fadeCurrentSlide(slide);		
-			})
-			
+			changeEnd(activeSlide);
 		},
 
-		scrollbarDragMove: function() {
-			dropPosition = document.querySelector(".swiper-scrollbar-drag").style.transform;			
+		scrollbarDragStart: function () {
+			this.slides.forEach(slide => {
+				fadeCurrentSlide(slide);
+			})
+
+		},
+
+		scrollbarDragMove: function () {
+			dropPosition = document.querySelector(".swiper-scrollbar-drag").style.transform;
 			dropPositionX = Number(dropPosition.substring(12, dropPosition.indexOf("px"))); //вытаскиваем положение ползунка по Х при перемещении
 			renderPlayScroll();
-		
+
 			//убираем баг с выезжающим за пределы скроллбара ползунком
-			const bar = document.querySelector(".swiper-scrollbar-drag"); 
-			if(dropPositionX > 1360) {
+			const bar = document.querySelector(".swiper-scrollbar-drag");
+			if (dropPositionX > 1360) {
 				bar.className = "swiper-scrollbar-drag bar-end"
 			} else {
 				bar.className = "swiper-scrollbar-drag"
 			}
-		},		
+		},
 
-		scrollbarDragEnd: function() {				
+		scrollbarDragEnd: function () {
 			let activeSlide = this.slides[this.activeIndex];
-			showNewSlide(activeSlide);	
-		}		
+			showNewSlide(activeSlide);
+		}
 	},
 
 	direction: 'horizontal',
@@ -227,14 +223,14 @@ new Swiper('.slider', {
 		/*dragSize: 'auto',*/
 	},
 
-	  	// Navigation Arrows
+	// Navigation Arrows
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 		hideOnClick: false,
 	},
 	/*centeredSlides: true,*/
-	
+
 });
 
 
@@ -251,7 +247,7 @@ new Swiper('.slider', {
 
 
 /*
-const bar1 = document.querySelector(".swiper-scrollbar-drag"); 
+const bar1 = document.querySelector(".swiper-scrollbar-drag");
 
 
 bar1.addEventListener("mousedown", onMouse);
@@ -259,7 +255,7 @@ bar1.addEventListener("mouseup", onMouse);
 
 function onMouse(event) {
 	event.preventDefault();
-    console.log(event.type + ", " + event.target);
+	console.log(event.type + ", " + event.target);
 }
 */
 
@@ -269,16 +265,16 @@ function onMouse(event) {
 const nextBtn = document.querySelector('.swiper-button-next');
 const prevBtn = document.querySelector('.swiper-button-prev');
 const swiper = document.querySelector('.swiper').swiper;
-const bar = document.querySelector(".swiper-scrollbar-drag"); 
+const bar = document.querySelector(".swiper-scrollbar-drag");
 
 nextBtn.addEventListener('click', function() {
 	swiper.slideNext();
-	moveBarRight();	
+	moveBarRight();
 });
 
 prevBtn.addEventListener('click', function() {
 	swiper.slidePrev();
-	moveBarLeft();	
+	moveBarLeft();
 });
 */
 
@@ -298,19 +294,19 @@ document.addEventListener('wheel', function(event) {
 
 /*
 document.addEventListener('keydown', (event) => {
-    let key = event.key || event.keyCode; // Поддержка старых версий браузеров!
-    switch(key) {
-        case 'ArrowLeft': 
-        case 37:
-            moveBarLeft();
-            event.preventDefault();
-            break; 
-        case 'ArrowRight': 
-        case 39:
-            moveBarRight();
-            event.preventDefault();
-            break;
-    }
+	let key = event.key || event.keyCode; // Поддержка старых версий браузеров!
+	switch(key) {
+		case 'ArrowLeft': 
+		case 37:
+			moveBarLeft();
+			event.preventDefault();
+			break; 
+		case 'ArrowRight': 
+		case 39:
+			moveBarRight();
+			event.preventDefault();
+			break;
+	}
 });
 */
 
@@ -346,6 +342,6 @@ let moveBarLeft = function () {
 bar.addEventListener("mousemove", mouseMoving, false);
 
 function mouseMoving(e) {
-    console.log(e.clientX + " " + e.clientY);
+	console.log(e.clientX + " " + e.clientY);
 }
 */
