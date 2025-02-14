@@ -1,5 +1,10 @@
-/* слайд 0 */
-.top-container {
+/* main*/
+.slide0_layer1 {
+	background-image: url(../img/background/back.png);
+	background-position: 0px 45px;
+}
+
+.slide0__top-container {
 	display: flex;
 	z-index: 2;
 	position: relative;
@@ -7,20 +12,20 @@
 	width: 100%;
 }
 
-.main-container {
+.slide0__main-container {
 	width: 700px;
 	opacity: 0;
 	transition: all 1s ease;
 }
 
-.main-container-title {
+.slide0__main-container-title {
 	padding-top: 116px;
 	padding-left: 137px;
 	font-size: 45px;
 	font-weight: 700;
 }
 
-.main-title-abbr {
+.slide0__main-title-abbr {
 	font-size: 160px;
 	font-weight: 900;
 	line-height: 162px;
@@ -28,20 +33,20 @@
 
 }
 
-.main-text-top,
-.main-text-bottom {
+.slide0__main-text-top,
+.slide0__main-text-bottom {
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 40px;
 }
 
-.main-title {
+.slide0__main-title {
 	color: var(--light-blue);
 }
 
-.main-text-top,
-.main-text-bottom,
-.main-title-abbr {
+.slide0__main-text-top,
+.slide0__main-text-bottom,
+.slide0__main-title-abbr {
 	background: -webkit-linear-gradient(90deg, rgb(75, 91, 102), rgb(88, 173, 234) 70%);
 	background: -moz-linear-gradient(90deg, rgb(75, 91, 102), rgb(88, 173, 234) 70%);
 	background: linear-gradient(90deg, rgb(75, 91, 102), rgb(88, 173, 234) 70%);
@@ -52,12 +57,12 @@
 	text-transform: uppercase;
 }
 
-.main-text-top {
+.slide0__main-text-top {
 	padding-top: 11px;
 	border-bottom: 1px solid var(--black);
 }
 
-.center-container {
+.slide0__center-container {
 	margin-top: 95px;
 	padding-top: 86px;
 	padding-left: 42px;
@@ -79,29 +84,29 @@
 
 }
 
-.center-year {
+.slide0__center-year {
 	display: flex;
 }
 
-.year {
+.slide0__year {
 	font-size: 200px;
 	font-weight: 900;
 	line-height: 180px;
 }
 
-.year-text {
+.slide0__year-text {
 	transform: rotate(270deg);
 	padding-top: 27px;
 	width: 100%;
 	padding-left: 4px;
 }
 
-.center-text {
+.slide0__center-text {
 	font-weight: 400;
 	padding-top: 8px;
 }
 
-.info-container {
+.slide0__info-container {
 	color: var(--black);
 	font-size: 24px;
 	font-weight: 400;
@@ -114,7 +119,7 @@
 	opacity: 0;
 }
 
-.info-header {
+.slide0__info-header {
 	font-weight: 700;
 	text-transform: uppercase;
 }
