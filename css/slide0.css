@@ -272,7 +272,7 @@
 }
 
 
-.move-img {
+.move-img {	
 	mask-image: url(../img/screen-0/gradient_mask1.png);
 	-webkit-mask-image: url(../img/screen-0/gradient_mask1.png);
 	-webkit-mask-size: 300% 100%;
