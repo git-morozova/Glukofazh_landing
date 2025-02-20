@@ -72,38 +72,54 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	transition: all 2s ease;
-	/*первое срабатывание первого слайда, дальше - js*/
 	transform: translateX(600px);
 	color: var(--white);
 	text-transform: uppercase;
-	display: flex;
-	flex-direction: column;
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 35px;
 
 }
 
-.slide0__center-year {
-	display: flex;
-}
-
 .slide0__year {
-	font-size: 200px;
+	font-size: 205px;
 	font-weight: 900;
-	line-height: 180px;
+	line-height: 190px;
+	width: 230px;
+	text-align: right;
 }
 
 .slide0__year-text {
 	transform: rotate(270deg);
-	padding-top: 27px;
-	width: 100%;
-	padding-left: 4px;
+	position: fixed;
+	top: 193px;
+	left: 279px;
+	font-size: 33px;
 }
 
 .slide0__center-text {
 	font-weight: 400;
-	padding-top: 8px;
+	padding-top: 6px;
+}
+
+/* в IE не работает */
+@property --num {
+	syntax: '<integer>';
+	inherits: true;
+	initial-value: 0;
+}
+
+.slide0__year::before {
+	counter-reset: my-counter var(--num);
+	content: counter(my-counter);
+	animation: count 2s forwards ease-out 1s;
+	text-align: right;
+}
+
+@keyframes count {
+	to {
+		--num: 42
+	}
 }
 
 .slide0__info-container {
@@ -167,7 +183,7 @@
 	opacity: 0;
 }
 
-.slide0_layer3__circle {
+.slide0_layer3__circle-container {
 	bottom: 149px;
 	left: 56px;
 	position: absolute;
@@ -180,50 +196,9 @@
 	overflow: hidden;
 }
 
-/* анимированный кружок */
-.circle {
-	background-clip: content-box;
-	margin: auto;
-	border-radius: 50%;
-	width: 70px;
-	height: 70px;
-	position: absolute;
-	opacity: 0;
-	animation: scaleIn 6.5s infinite linear;
-}
-
-.slide0_layer3__circle-out {
-	transition: all 2s ease;
-	opacity: 0;
-	position: absolute;
-	width: 70px;
-	height: 70px;
-}
-
-.slide0_layer3__circle-img {
-	z-index: 10;
-	transition-delay: 1s;
-	transition: all 2s ease;
-	opacity: 0;
-}
-
 .slide0_layer5__lines {
 	transition: all 2s ease;
 	opacity: 0;
-}
-
-@keyframes scaleIn {
-	from {
-		border: 2.2px solid #1CCEFF;
-		transform: scale(0.5, 0.5);
-		opacity: 1;
-	}
-
-	to {
-		transform: scale(3.1, 3.1);
-		opacity: 0;
-		border: 1px solid #1CCEFF;
-	}
 }
 
 /* полоски */
@@ -231,9 +206,9 @@
 	position: absolute;
 	bottom: 134px;
 	left: 143px;
-	z-index: 11;
+	z-index: 10;
 	animation: clip-fade 12s ease;
-	
+
 	-webkit-mask-image: linear-gradient(90deg, #fff 50%, #0000 50%);
 	mask-image: linear-gradient(90deg, #fff 50%, #0000 50%);
 	-webkit-mask-size: 220% 100%;
@@ -241,7 +216,13 @@
 	-webkit-mask-position: right;
 	mask-position: right;
 }
-
+.slide0_layer5__line-wh {
+	position: absolute;
+	bottom: 134px;
+	left: 143px;
+	z-index: 9;
+	opacity: 0;
+}
 .slide0_layer5__line-bottom {
 	position: absolute;
 	bottom: 147px;
@@ -253,17 +234,13 @@
 	mask-image: linear-gradient(90deg, #fff 50%, #0000 50%);
 	-webkit-mask-size: 220% 100%;
 	mask-size: 220% 100%;
-	
+
 	-webkit-mask-position: right;
 	mask-position: right;
 }
 
-
-
-
 @keyframes clip-fade {
-	0% {
-	}
+	0% {}
 
 	100% {
 		-webkit-mask-position: left;
@@ -271,8 +248,7 @@
 	}
 }
 
-
-.move-img {	
+.animation__move-img {
 	mask-image: url(../img/screen-0/gradient_mask1.png);
 	-webkit-mask-image: url(../img/screen-0/gradient_mask1.png);
 	-webkit-mask-size: 300% 100%;
@@ -280,14 +256,11 @@
 	animation: move 5s forwards infinite;
 }
 
-
 @keyframes move {
-
 	0% {
 		-webkit-mask-position: right;
 		mask-position: right;
 	}
-
 
 	100% {
 		-webkit-mask-position: left;
@@ -305,14 +278,14 @@
 	display: flex;
 	flex-direction: row;
 	gap: 53px;
-	text-align: center;	
+	text-align: center;
 	z-index: 12;
 }
 
 .slide0_layer4__stage {
 	opacity: 0;
 	animation: bounce 2s forwards ease;
-	
+
 }
 
 .slide0_layer4__stage_name {
@@ -344,9 +317,11 @@
 		transform: translateY(100px);
 		opacity: 0;
 	}
+
 	60% {
 		transform: translateY(-10px);
 	}
+
 	100% {
 		transform: translateY(0px);
 		opacity: 1;

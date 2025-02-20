@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Описание страницы" />
-	
+
 	<meta name="robots" content="noindex, nofollow"> <!-- УБРАТЬ ПОСЛЕ РЕЛИЗА -->
-	<meta name="viewport" content="width=device-width, initial-scale=0.8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Исследование UKPDS</title>
 
@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/slide0.css">
 	<link rel="stylesheet" href="css/slide1.css">
+	<link rel="stylesheet" href="css/slide2.css">
 	<script src="js/app.js" defer></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +54,7 @@
 				<!--moving elements-->
 				<div class="swiper-wrapper slider__wrapper">
 
+					<!--slide0-->
 					<div class="swiper-slide slider__item " data-history="slide0">
 
 						<div class="slider__layer slide0_layer1" data-swiper-parallax="85%">
@@ -65,9 +67,10 @@
 						<div class="slider__layer slide0_layer3" data-swiper-parallax="35%">
 							<img class="slide0_layer3__main" src="img/screen-0/center_pic.png" alt="росток">
 
-							<div class="slide0_layer3__circle">
-								<img class="slide0_layer3__circle-img" src="img/screen-0/circle.svg" alt="кружок">
-								<div class="slide0_layer3__circle-out">
+							<div class="slide0_layer3__circle-container">
+								<img class="slide0_layer3__circle-img circle-img" src="img/icons/circle.svg"
+									alt="кружок">
+								<div class="slide0_layer3__circle-out circle-out">
 									<div class="circle" style="animation-delay: -6.0s"></div>
 									<div class="circle" style="animation-delay: -5.5s"></div>
 									<div class="circle" style="animation-delay: -5.0s"></div>
@@ -86,6 +89,7 @@
 
 							<div class="slide0_layer5__lines">
 								<img class="slide0_layer5__line-top" src="img/screen-0/line1.png" alt="линия">
+								<img class="slide0_layer5__line-wh" src="img/screen-0/line1-wh.png" alt="линия">
 								<img class="slide0_layer5__line-bottom" src="img/screen-0/line2.png" alt="линия">
 							</div>
 
@@ -100,11 +104,13 @@
 								</div>
 								<div class="slide0_layer4__stage" style="animation-delay: 2.5s">
 									<div class="slide0_layer4__stage_name">UKPDS 33</div>
-									<div class="slide0_layer4__stage_descr">Интенсивный контроль<br>уровня глюкозы в крови</div>
+									<div class="slide0_layer4__stage_descr">Интенсивный контроль<br>уровня глюкозы в
+										крови</div>
 								</div>
 								<div class="slide0_layer4__stage" style="animation-delay: 3.1s">
 									<div class="slide0_layer4__stage_name">UKPDS 34</div>
-									<div class="slide0_layer4__stage_descr">Интенсивный контроль<br>гликемии метформином</div>
+									<div class="slide0_layer4__stage_descr">Интенсивный контроль<br>гликемии метформином
+									</div>
 								</div>
 								<div class="slide0_layer4__stage" style="animation-delay: 4.0s">
 									<div class="slide0_layer4__stage_name">UKPDS 80</div>
@@ -122,15 +128,15 @@
 								<div class="slide0__main-container-title">
 									<h2 class="slide0__main-title">Исследование</h2>
 									<hi class="slide0__main-title-abbr">UKPDS</hi>
-									<div class="slide0__main-text-top">The United Kingdom Prospective Diabetes Study</div>
-									<div class="slide0__main-text-bottom">Британское Проспективное исследование сахарного диабета</div>
+									<div class="slide0__main-text-top">The United Kingdom Prospective Diabetes Study
+									</div>
+									<div class="slide0__main-text-bottom">Британское Проспективное исследование
+										сахарного диабета</div>
 								</div>
 							</div>
 							<div class="slide0__center-container">
-								<div class="slide0__center-year">
-									<div class="slide0__year">42</div>
-									<div class="slide0__year-text">года</div>
-								</div>
+								<div class="slide0__year"></div>
+								<div class="slide0__year-text">года</div>
 								<div class="slide0__center-text">
 									изучения<br>сахарного диабета
 								</div>
@@ -149,46 +155,330 @@
 						</div>
 
 					</div>
+					<!--/slide0-->
 
+					<!--slide1-->
 					<div class="swiper-slide slider__item" data-history="slide1">
-						
+
 						<div class="slider__layer slide1_layer1" data-swiper-parallax="85%">
 							<div class="title-text">slide1</div>
 						</div>
 						<div class="slider__layer slide1_layer5" data-swiper-parallax="65%">
 							<img class="slide1_layer5__leaf2" src="img/leaves/leaf3_1.png" alt="лист">
 							<img class="slide1_layer5__leaf3" src="img/leaves/leaf6.png" alt="лист">
-						</div>
-						<div class="slider__layer" data-swiper-parallax="55%"></div>
-						<div class="slider__layer" data-swiper-parallax="25%">
 							<img class="slide1_layer4__leaf1" src="img/leaves/leaf1.png" alt="лист">
 						</div>
-						
+						<div class="slider__layer" data-swiper-parallax="35%">
+
+							<div class="slide1_layer3__line-container">
+								<div class="slide1_layer3__circle-container slide1_layer3__circle-container-first">
+									<img class="slide1_layer3__circle-img-first circle-img" src="img/icons/circle.svg"
+										alt="кружок">
+									<div class="slide1_layer3__circle-out-first circle-out">
+										<div class="circle" style="animation-delay: -6.0s"></div>
+										<div class="circle" style="animation-delay: -5.5s"></div>
+										<div class="circle" style="animation-delay: -5.0s"></div>
+										<div class="circle" style="animation-delay: -4.5s"></div>
+										<div class="circle" style="animation-delay: -4.0s"></div>
+										<div class="circle" style="animation-delay: -3.5s"></div>
+										<div class="circle" style="animation-delay: -3.0s"></div>
+										<div class="circle" style="animation-delay: -2.5s"></div>
+										<div class="circle" style="animation-delay: -2.0s"></div>
+										<div class="circle" style="animation-delay: -1.5s"></div>
+										<div class="circle" style="animation-delay: -1.0s"></div>
+										<div class="circle" style="animation-delay: -0.5s"></div>
+										<div class="circle" style="animation-delay: 0s"></div>
+									</div>
+								</div>
+								<div class="slide1_layer3__circle-container slide1_layer3__circle-container-second">
+									<img class="slide1_layer3__circle-img-second circle-img" src="img/icons/circle.svg"
+										alt="кружок">
+									<div class="slide1_layer3__circle-out-second circle-out">
+										<div class="circle" style="animation-delay: -6.0s"></div>
+										<div class="circle" style="animation-delay: -5.5s"></div>
+										<div class="circle" style="animation-delay: -5.0s"></div>
+										<div class="circle" style="animation-delay: -4.5s"></div>
+										<div class="circle" style="animation-delay: -4.0s"></div>
+										<div class="circle" style="animation-delay: -3.5s"></div>
+										<div class="circle" style="animation-delay: -3.0s"></div>
+										<div class="circle" style="animation-delay: -2.5s"></div>
+										<div class="circle" style="animation-delay: -2.0s"></div>
+										<div class="circle" style="animation-delay: -1.5s"></div>
+										<div class="circle" style="animation-delay: -1.0s"></div>
+										<div class="circle" style="animation-delay: -0.5s"></div>
+										<div class="circle" style="animation-delay: 0s"></div>
+									</div>
+								</div>
+								<div class="slide1_layer3__circle-container slide1_layer3__circle-container-third">
+									<img class="slide1_layer3__circle-img-third circle-img" src="img/icons/circle.svg"
+										alt="кружок">
+									<div class="slide1_layer3__circle-out-third circle-out">
+										<div class="circle" style="animation-delay: -6.0s"></div>
+										<div class="circle" style="animation-delay: -5.5s"></div>
+										<div class="circle" style="animation-delay: -5.0s"></div>
+										<div class="circle" style="animation-delay: -4.5s"></div>
+										<div class="circle" style="animation-delay: -4.0s"></div>
+										<div class="circle" style="animation-delay: -3.5s"></div>
+										<div class="circle" style="animation-delay: -3.0s"></div>
+										<div class="circle" style="animation-delay: -2.5s"></div>
+										<div class="circle" style="animation-delay: -2.0s"></div>
+										<div class="circle" style="animation-delay: -1.5s"></div>
+										<div class="circle" style="animation-delay: -1.0s"></div>
+										<div class="circle" style="animation-delay: -0.5s"></div>
+										<div class="circle" style="animation-delay: 0s"></div>
+									</div>
+								</div>
+								<div class="slide1_layer3__circle-container slide1_layer3__circle-container-fourth">
+									<img class="slide1_layer3__circle-img-fourth circle-img" src="img/icons/circle.svg"
+										alt="кружок">
+									<div class="slide1_layer3__circle-out-fourth circle-out">
+										<div class="circle" style="animation-delay: -6.0s"></div>
+										<div class="circle" style="animation-delay: -5.5s"></div>
+										<div class="circle" style="animation-delay: -5.0s"></div>
+										<div class="circle" style="animation-delay: -4.5s"></div>
+										<div class="circle" style="animation-delay: -4.0s"></div>
+										<div class="circle" style="animation-delay: -3.5s"></div>
+										<div class="circle" style="animation-delay: -3.0s"></div>
+										<div class="circle" style="animation-delay: -2.5s"></div>
+										<div class="circle" style="animation-delay: -2.0s"></div>
+										<div class="circle" style="animation-delay: -1.5s"></div>
+										<div class="circle" style="animation-delay: -1.0s"></div>
+										<div class="circle" style="animation-delay: -0.5s"></div>
+										<div class="circle" style="animation-delay: 0s"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide1_layer5__lines">
+								<img class="slide1_layer5__line" src="img/screen-1/line_bottom.svg" alt="линия">
+								<img class="slide1_layer5__line-wh" src="img/screen-1/line_bottom-wh.svg" alt="линия">
+							</div>
+
+						</div>
+						<div class="slider__layer" data-swiper-parallax="25%">
+							<div class="slide1__title-container">
+								<div class="slide1__title-back">
+								</div>
+								<div class="slide1__title-text">
+									Основные цели исследования:
+								</div>
+							</div>
+							<div class="slide1_layer4__info-container">
+								<div class="slide1_layer4__info-first">
+									<div class="slide1_layer4__info-header">
+										Контроль гликемии
+									</div>
+									<div class="slide1_layer4__info-text">
+										Определить, как&nbsp;интенсивный контроль уровня глюкозы в&nbsp;крови риск
+										развития микрососудистых и&nbsp;макрососудистых осложнений при&nbsp;СД2
+									</div>
+								</div>
+								<div class="slide1_layer4__info-second">
+									<div class="slide1_layer4__info-header">
+										Контроль артериального давления
+									</div>
+									<div class="slide1_layer4__info-text">
+										Оценить влияние жесткого контроля АД на&nbsp;частоту осложнений, связанных
+										с&nbsp;диабетом
+									</div>
+								</div>
+								<div class="slide1_layer4__info-third">
+									<div class="slide1_layer4__info-header">
+										Осложнения
+									</div>
+									<div class="slide1_layer4__info-text">
+										Сосредоточится на&nbsp;профилактике и&nbsp;смягчении микрососудистых
+										и&nbsp;макрососудистых осложнений
+									</div>
+								</div>
+								<div class="slide1_layer4__info-fourth">
+									<div class="slide1_layer4__info-header">
+										Долгосрочные результаты
+									</div>
+									<div class="slide1_layer4__info-text">
+										<ul>
+											<li>Оценить устойчивость и&nbsp;долгосрочные преимущества стратегий раннего
+												интенсивного лечения</li>
+											<li>Изучить концепцию «эффекта наследия» или&nbsp;«метаболической памяти»
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div class="slide1__top-container">
 							<div class="slide1__main-container">
 								<div class="slide1__main-container-title">
 									<h2 class="slide1__main-title">Исследование</h2>
 									<h2 class="slide1__main-title-abbr">UKPDS</h2>
-								</div>								
-								<div class="slide1__line-small">
-									
 								</div>
-							</div>
-							<div class="slide1__center-container">
-								
-							</div>
-							<div class="slide1__info-container">
-								
+								<div class="slide1__main-container-line">
+								</div>
+								<div class="slide1__main-container-text">
+									Начатое в 1977 году Британское проспективное исследование диабета (UKPDS) является
+									одним из крупнейших и наиболее влиятельных знаковых исследований диабета 2 типа
+								</div>
 							</div>
 						</div>
 
 					</div>
+					<!--/slide1-->
 
+					<!--slide2-->
 					<div class="swiper-slide slider__item" data-history="slide2">
-						<div class="slider__layer" data-swiper-parallax="55%"></div>
-						<div class="slider__layer" data-swiper-parallax="25%"></div>
-						<div class="title-text">slide2</div>
+						<div class="slider__layer slide2_layer1" data-swiper-parallax="85%">
+							<div class="title-text">slide2</div>
+						</div>
+						<div class="slider__layer slide2_layer2" data-swiper-parallax="65%">
+							<img class="slide2_layer2__cloud1" src="img/clouds/cloud1.png" alt="облако">
+							<img class="slide2_layer2__cloud2" src="img/clouds/cloud2.png" alt="облако">
+						</div>
+						<div class="slider__layer slide2_layer3" data-swiper-parallax="35%">
+							<img class="slide2_layer3__leaf1" src="img/leaves/leaf6_1.png" alt="лист">
+							<img class="slide2_layer3__leaf2" src="img/leaves/leaf9.png" alt="лист">
+							<img class="slide2_layer3__leaf3" src="img/leaves/leaf7.png" alt="лист">
+						</div>
+						<div class="slider__layer slide2_layer4" data-swiper-parallax="25%">
+							<img class="slide2_layer2__leaf1" src="img/leaves/leaf8.png" alt="лист">
+							<div class="slide2__top-container">
+								<div class="slide2__top-container-line">
+								</div>
+								<div class="slide2__top-container-title">
+									<h2>Начало UKPDS</h2>
+								</div>
+							</div>
+							<div class="slide2__circle-container">
+								<div class="slide2__circle-img circle-img"></div>
+								<div class="slide2__circle-out circle-out">
+									<div class="circle-wh" style="animation-delay: -6.0s"></div>
+									<div class="circle-wh" style="animation-delay: -5.5s"></div>
+									<div class="circle-wh" style="animation-delay: -5.0s"></div>
+									<div class="circle-wh" style="animation-delay: -4.5s"></div>
+									<div class="circle-wh" style="animation-delay: -4.0s"></div>
+									<div class="circle-wh" style="animation-delay: -3.5s"></div>
+									<div class="circle-wh" style="animation-delay: -3.0s"></div>
+									<div class="circle-wh" style="animation-delay: -2.5s"></div>
+									<div class="circle-wh" style="animation-delay: -2.0s"></div>
+									<div class="circle-wh" style="animation-delay: -1.5s"></div>
+									<div class="circle-wh" style="animation-delay: -1.0s"></div>
+									<div class="circle-wh" style="animation-delay: -0.5s"></div>
+									<div class="circle-wh" style="animation-delay: 0s"></div>
+								</div>
+							</div>
+							<div class="slide2__bottom-container">
+								<div class="slide2__bottom-button button">									
+									<div class="slide2__button-arrow">
+										<img src="img/buttons/button_arrow.svg" alt="➾">										
+									</div>
+									<div class="slide2__button-text">
+										Интересные факты
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="slide2__main-container">
+							<div class="slide2__main-col-left">
+								<h3 class="slide2__main-col-left_title">Гипотеза:</h3>
+								<p class="slide2__main-col-left_text">
+									Раннее снижение уровня глюкозы в&nbsp;крови до&nbsp;нормального уровня с&nbsp;помощью любого 
+									из&nbsp;лекарственных препаратов снизит вероятность осложнений, связанных с&nbsp;сахарным
+									диабетом, и&nbsp;макрососудистых нарушений, которые являются основной причиной смертности
+									и&nbsp;тяжелых осложнений при&nbsp;сахарном диабете 2&nbsp;типа
+
+								</p>
+							</div>
+							<div class="slide2__main-col-right">
+								<div class="slide2__right-one">
+									<div class="slide2__main-col-right-back slide2__back-one">
+									</div>
+									<div class="slide2__main-col-right-text slide2__text-one">
+										Дизайн:&nbsp;&nbsp; Рандомизированное контролируемое исследование
+									</div>
+								</div>	
+								<div class="slide2__right-two">
+									<div class="slide2__main-col-right-back slide2__back-two">
+									</div>
+									<div class="slide2__main-col-right-text slide2__text-two">
+										Популяция: Впервые  выявленные пациенты с&nbsp;СД2, N&nbsp;=&nbsp;4209
+									</div>
+								</div>	
+								<div class="slide2__right-three">
+									Интенсивная терапия сульфонилмочевиной или&nbsp;инсулином: N&nbsp;=&nbsp;2729
+								</div>	
+								<div class="slide2__right-four">
+									Интенсивная терапия Метформином у&nbsp;пациентов с&nbsp;избыточной массой: N&nbsp;=&nbsp;342
+								</div>
+								<div class="slide2__right-five">
+									Традиционная терапия (диета): N&nbsp;=&nbsp;1132, из&nbsp;них с&nbsp;избыточной массой: N&nbsp;=&nbsp;411
+								</div>
+								<div class="slide2__right-six">
+									<div class="slide2__main-col-right-back slide2__back-six">
+									</div>
+									<div class="slide2__main-col-right-text slide2__text-six">
+										Конечные точки
+									</div>
+								</div>	
+								<div class="slide2__right-seven">
+									<div class="slide2__main-col-right-dot dot slide2__dot-seven">
+										<div class="slide2__dot-seven-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-seven">
+										Серьезные сердечно–сосудистые события
+									</div>
+								</div>
+								<div class="slide2__right-eight">
+									<div class="slide2__main-col-right-dot dot slide2__dot-eight">
+										<div class="slide2__dot-eight-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-eight">
+										Диабетическая ретинопатия
+									</div>
+								</div>
+								<div class="slide2__right-nine">
+									<div class="slide2__main-col-right-dot dot slide2__dot-nine">
+										<div class="slide2__dot-nine-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-nine">
+										Диабетическая нефропатия
+									</div>
+								</div>
+								<div class="slide2__right-ten">
+									<div class="slide2__main-col-right-back slide2__back-ten">
+									</div>
+									<div class="slide2__main-col-right-text slide2__text-ten">
+										Клинические исходы
+									</div>
+								</div>	
+								<div class="slide2__right-eleven">
+									<div class="slide2__main-col-right-dot dot slide2__dot-eleven">
+										<div class="slide2__dot-eleven-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-eleven">
+										Все связанные с&nbsp;СД 2&nbsp;типа события
+									</div>
+								</div>
+								<div class="slide2__right-twelve">
+									<div class="slide2__main-col-right-dot dot slide2__dot-twelve">
+										<div class="slide2__dot-twelve-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-twelve">
+										Смертность, связанная с&nbsp;СД 2&nbsp;типа
+									</div>
+								</div>
+								<div class="slide2__right-thirteen">
+									<div class="slide2__main-col-right-dot dot slide2__dot-thirteen">
+										<div class="slide2__dot-thirteen-pulse"></div>
+									</div>
+									<div class="slide2__main-col-right-dottext slide2__text-thirteen">
+										Смертность от&nbsp;любых причин
+									</div>
+								</div>
+							</div>
+						</div>		
 					</div>
+					<!--/slide2-->
 
 					<div class="swiper-slide slider__item" data-history="slide2">
 						<div class="slider__layer" data-swiper-parallax="55%"></div>
@@ -230,11 +520,24 @@
 
 				<!--position: absolute elements-->
 				<div class="fix">
-					<div class="tree-image-block">
+					<div class="slide2__roots">
+						<img class="slide2__root1-intern" src="img/tree/intern_root1.png" alt="линия">
+						<img class="slide2__root2-intern" src="img/tree/intern_root2.png" alt="линия">
+						<img class="slide2__root3-intern" src="img/tree/intern_root3.png" alt="линия">
+						<img class="slide2__roots-intern-wh" src="img/screen-0/line1-wh.png" alt="линия">
+					</div>
+					<div class="tree-image-block">						
 						<img class="tree-image-intern" src="img/tree/intern.png" alt="дерево">
 						<img class="tree-image-junior" src="img/tree/junior.png" alt="дерево">
 						<img class="tree-image-middle" src="img/tree/middle.png" alt="дерево">
 						<img class="tree-image-senior" src="img/tree/senior.png" alt="дерево">
+					</div>
+					<div class="title-container">
+						<div class="title-back">
+						</div>
+						<div class="title-year">
+							1977
+						</div>
 					</div>
 				</div>
 
@@ -259,7 +562,8 @@
 			<br>
 			1. Adler AI, Coleman RL, Leal J, Whiteley WN, Clarke P, Holman RR. Post-trial monitoring of a randomised
 			controlled trial of intensive glycaemic control in type 2 diabetes extended from 10 years to 24 years (UKPDS
-			91). Lancet. https://doi.org/10.1016/S0140-6736(24)00537-3
+			91). Lancet. <a target="_blank"
+				href="https://doi.org/10.1016/S0140-6736(24)00537-3">https://doi.org/10.1016/S0140-6736(24)00537-3</a>
 		</div>
 	</footer>
 </body>
