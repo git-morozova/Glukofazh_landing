@@ -1,0 +1,221 @@
+/* main */
+.slide8_layer2 {
+    background: url(../img/background/back7.png) no-repeat;
+    background-position: -7px 442px;
+}
+
+.slide8_topline {
+    background-color: var(--white);
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    z-index: 500;
+    top: 139px;
+    opacity: 0;
+}
+
+/* пентагон */
+.slide8__poly {
+    position: absolute;
+    right: 33px;
+    top: 88px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.slide8_layer3__nuts {
+    bottom: 53px;
+    left: 451px;
+    position: absolute;
+    transition: all 1s ease;
+    opacity: 0;
+    z-index: 210;
+}
+
+/* листья */
+.slide8_layer3__leaf1 {
+    position: absolute;
+    left: 602px;
+    top: 0;
+    transition: all 2s ease 1s;
+}
+
+.slide8_layer3__leaf2 {
+    position: absolute;
+    left: 809px;
+    top: 0;
+    transition: all 2s ease;
+}
+
+.slide8_layer3__leaf3 {
+    position: absolute;
+    left: -1302px;
+    top: 100px;
+    z-index: 210;
+    opacity: 0;
+    transition: all 2s ease;
+    z-index: 300;
+}
+
+
+/* контент */
+.slide8__main {
+    padding-left: 528px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    width: 1850px;
+    position: absolute;
+    transition: all 2s ease;
+    display: flex;
+    top: 380px;
+    opacity: 1;
+}
+
+.slide8__main-left,
+.slide8__main-right {
+    display: flex;
+    margin-top: 60px;
+    z-index: 270;
+    opacity: 0;
+}
+
+.slide8__main-right-dottext,
+.slide8__main-left-dottext {
+    margin-left: 14px;
+    z-index: 280;
+}
+
+.slide8__main-right-dot,
+.slide8__main-left-dot {
+    z-index: 290;
+}
+
+.slide8__text-left,
+.slide8__text-right {
+    top: 0;
+    position: absolute;
+    padding: 61px 47px;
+    height: 436px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0);
+    border-top-right-radius: 36px;
+    backdrop-filter: blur(0px) opacity(0);
+    transition: all 2s ease;
+    z-index: 280;
+}
+
+.slide8__text-left {
+    width: 621px;
+    left: -1457px;
+}
+
+.slide8__text-right {
+    width: 606px;
+    left: -1457px;
+}
+
+.slide8__main-left {
+    transition: all 2s ease;
+    margin-left: 14px;
+}
+
+.slide8__main-right {
+    margin-left: 627px;
+    transition: all 2s ease;
+    margin-left: 630px;
+}
+.slide8__main-ul-left {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 44px 0 0 13px;
+  }
+  .slide8__main-ul-right {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 40px 0 0 13px;
+  }
+.slide8__main-ul li::before {
+    content: "•";
+    position: absolute;
+    left: 57px;
+  }
+  .slide8__main-ul-left li {
+    padding-bottom: 3px;
+    padding-left: 16px;
+
+  }
+  .slide8__main-ul-right li {
+    padding-bottom: 24px;
+    padding-left: 16px;
+  }
+
+
+/* корни */
+.slide8__root1-senior {
+    position: absolute;
+    top: 786px;
+    left: -2px;
+    z-index: 250;
+    opacity: 0;
+}
+
+.slide8__root2-senior {
+    position: absolute;
+    top: 796px;
+    left: 95px;
+    z-index: 240;
+    transition: all 2s ease;
+    opacity: 0;
+}
+
+.slide8__root1-back {
+    position: absolute;
+    top: 786px;
+    left: -2px;
+    z-index: 245;
+    transition: all 2s ease;
+    opacity: 0;
+}
+
+
+.animation__root-slide8 {
+    animation: clip-fade8 4s forwards ease;
+    -webkit-mask-image: linear-gradient(90deg, #fff 50%, #0000 50%);
+    mask-image: linear-gradient(90deg, #fff 50%, #0000 50%);
+    -webkit-mask-size: 220% 100%;
+    mask-size: 220% 100%;
+    -webkit-mask-position: right;
+    mask-position: right;
+}
+
+@keyframes clip-fade8 {
+    0% {}
+
+    100% {
+        -webkit-mask-position: left;
+        mask-position: left;
+    }
+}
+
+.animation__move-img8 {
+    mask-image: url(../img/screen-2/gradient_mask2.png);
+    -webkit-mask-image: url(../img/screen-2/gradient_mask2.png);
+    -webkit-mask-size: 300% 100%;
+    mask-size: 300% 100%;
+    animation: move8 10s steps(100) infinite;
+    -webkit-mask-position: right;
+    mask-position: right;
+    will-change: mask-position;
+}
+
+@keyframes move8 {
+    100% {
+        -webkit-mask-position: left;
+        mask-position: left;
+    }
+}

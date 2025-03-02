@@ -1,7 +1,7 @@
 /* main*/
 .slide1_layer1 {
 	background-image: url(../img/background/back.png);
-	background-position: 0px 45px;
+	background-position: 0px 1px;
 }
 .slide1_layer5 {
 	z-index: 100;
