@@ -3,7 +3,7 @@
 
 /* конструктор слайдера */
 const swiper = new Swiper('.slider', {
-	speed: 1000,
+	speed: 100,
 	parallax: true,
 	spaceBetween: 18,
 	centeredSlides: false,
@@ -25,7 +25,7 @@ const swiper = new Swiper('.slider', {
 			window.localStorage.setItem("activeSlide", this.activeIndex); // localStorage
 			showNewSlide();
 			changeWithDirection();
-			hidePopup();
+			deletePopups();
 		},
 		//slideNextTransitionStart: () => {	 // с драгом не работает	
 
@@ -37,14 +37,14 @@ const swiper = new Swiper('.slider', {
 			dropPosition = document.querySelector(".swiper-scrollbar-drag").style.transform;
 			dropPositionX = Number(dropPosition.substring(12, dropPosition.indexOf("px"))); //вытаскиваем положение ползунка по Х при перемещении			
 			renderPlayScroll();
-			
+
 			// для экранов менее 1920рх			
-			const screenWidth = window.outerWidth;
+			/*const screenWidth = window.outerWidth;
 			if (screenWidth <= 1920) {
 				dropPositionX = dropPositionX *1.2;
 				const bar1 = document.querySelector(".swiper-scrollbar-drag");
-				bar1.style.transform = "translateX(" + dropPositionX + "px)";				
-			} 
+				bar1.style.transform = "translateX(" + dropPositionX + "px)";		
+			} */
 
 			//убираем баг с выезжающим за пределы скроллбара ползунком
 			const bar = document.querySelector(".swiper-scrollbar-drag");
@@ -52,14 +52,14 @@ const swiper = new Swiper('.slider', {
 				bar.className = "swiper-scrollbar-drag bar-end"
 			} else {
 				bar.className = "swiper-scrollbar-drag"
-			}		
+			}
 		},
 
 		scrollbarDragEnd: function () {
 			window.localStorage.setItem("activeSlide", this.activeIndex); // localStorage
 			showNewSlide();
 			changeWithDirection();
-			hidePopup();
+			deletePopups();
 		}
 	},
 
@@ -70,8 +70,8 @@ const swiper = new Swiper('.slider', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		draggable: true,
-		/*snapOnRelease: true,*/
-		/*dragSize: 'auto',*/
+		snapOnRelease: true,
+		/*dragSize: 268,*/
 	},
 	// стрелки навигации
 	navigation: {
@@ -141,6 +141,7 @@ let renderFirstSlide = () => {
 
 // анимация - слайд 2
 let renderSecondSlide = () => {
+	document.querySelector(".slide2__bottom-container").style.cssText = "opacity: 1; z-index: 100"; // кнопка	
 	document.querySelector(".tree-image-intern").style.opacity = 1; // дерево
 	document.querySelector(".slide2_layer2__leaf1").style.transform = "translate3d(301px, 100px, 0px)"; // левый лист
 	document.querySelector(".slide2_layer3__leaf1").style.transform = "translate3d(2000px, 100px, 0px)"; // левый бледный лист
@@ -203,7 +204,6 @@ let renderSecondSlide = () => {
 	document.querySelector(".slide2__text-thirteen").classList.add("animation-typing"); // анимация текста 13
 	document.querySelector(".slide2__text-thirteen").style.cssText = "animation-delay: 4.5s; opacity: 1"; // текст 13
 
-	document.querySelector(".slide2__bottom-container").style.cssText = "opacity: 1"; // кнопка	
 
 	document.querySelector(".slide2__root1-intern").classList.add("animation__root-slide2"); // для анимации корней
 	document.querySelector(".slide2__root1-intern").style.cssText = "opacity: 1"; // корень 1
@@ -219,6 +219,7 @@ let renderSecondSlide = () => {
 
 // анимация - слайд 3
 let renderThirdSlide = () => {
+	document.querySelector(".slide3__bottom-container").style.cssText = "opacity: 1; z-index: 100"; // кнопка	
 	document.querySelector(".title-back").style.cssText = "width: 130px; opacity: 1"; // подзаг
 	document.querySelector(".title-year").style.cssText = "opacity: 1"; // подзаг - текст
 	document.querySelector(".title-container").style.cssText = "opacity: 1; transform: translate3d(116px, -10px, 0px)"; // подзаг контейнер
@@ -259,6 +260,7 @@ let renderThirdSlide = () => {
 
 // анимация - слайд 4
 let renderFourthSlide = () => {
+	document.querySelector(".slide4__bottom-container").style.cssText = "opacity: 1; z-index: 100"; // кнопка
 	document.querySelector(".title-back").style.cssText = "width: 130px; opacity: 1"; // подзаг
 	document.querySelector(".title-year").style.cssText = "opacity: 1"; // подзаг - текст	
 	document.querySelector(".title-container").style.cssText = "opacity: 1; transform: translate3d(193px, 2px, 0px)"; // подзаг контейнер
@@ -303,6 +305,7 @@ let renderFourthSlide = () => {
 
 // анимация - слайд 5
 let renderFifthSlide = () => {
+	document.querySelector(".slide4__bottom-container").style.cssText = "opacity: 1; z-index: 100"; // кнопка
 	document.querySelector(".title-back").style.cssText = "width: 130px; opacity: 1"; // подзаг
 	document.querySelector(".title-year").style.cssText = "opacity: 1"; // подзаг - текст
 	document.querySelector(".title-container").style.cssText = "opacity: 1; transform: translate3d(193px, 2px, 0px)"; // подзаг контейнер
@@ -316,8 +319,8 @@ let renderFifthSlide = () => {
 	document.querySelector(".slide5_layer3__leaf2").style.transform = "translate3d(-1100px, -200px, 0px)"; // средний лист
 	document.querySelector(".slide5_layer3__leaf3").style.transform = "translate3d(-1100px, -200px, 0px)"; // правый лист
 	document.querySelector(".slide5_layer2__line").style.cssText = "transition-delay: 1.5s;opacity: 1"; // линия вертикальная
-	document.querySelector(".slide5_layer2__circle-arrow-one").style.cssText = "transition-delay: 1.5s;opacity: 1"; // стрелка в кружке 1
-	document.querySelector(".slide5_layer2__circle-arrow-two").style.cssText = "transition-delay: 1.5s;opacity: 1"; // стрелка в кружке 2
+	document.querySelector(".slide5_layer2__circle-arrow-one").style.cssText = "opacity: 1"; // стрелка в кружке 1
+	document.querySelector(".slide5_layer2__circle-arrow-two").style.cssText = "opacity: 1"; // стрелка в кружке 2
 	document.querySelector(".slide5__circle-img").style.cssText = "transition-delay: 2s; opacity: 1"; // кружок с пульсацией
 	document.querySelector(".slide5__circle-out").style.cssText = "transition-delay: 2.5s; opacity: 1"; // пульсация
 	document.querySelector(".slide5__main").style.cssText = "transition-delay: 1s; opacity: 1"; // колонка
@@ -352,6 +355,7 @@ let renderFifthSlide = () => {
 
 // анимация - слайд 6
 let renderSixthSlide = () => {
+	document.querySelector(".slide6__bottom-container").style.cssText = "opacity: 1; z-index: 100"; // кнопка
 	document.querySelector(".title-back").style.cssText = "width: 130px; opacity: 1"; // подзаг
 	document.querySelector(".title-year").style.cssText = "opacity: 1"; // подзаг - текст
 	document.querySelector(".title-container").style.cssText = "opacity: 1; transform: translate3d(193px, 2px, 0px)"; // подзаг контейнер
@@ -367,8 +371,8 @@ let renderSixthSlide = () => {
 	document.querySelector(".slide6__top-container-line").style.cssText = "opacity: 1"; // полоска около зага
 	document.querySelector(".slide6__top-container-title").style.cssText = "opacity: 1"; // заг
 	document.querySelector(".slide6_layer2__line").style.cssText = "transition-delay: 1.5s;opacity: 1"; // линия вертикальная
-	document.querySelector(".slide6_layer2__circle-arrow-one").style.cssText = "transition-delay: 1.5s;opacity: 1"; // стрелка в кружке 1
-	document.querySelector(".slide6_layer2__circle-arrow-two").style.cssText = "transition-delay: 1.5s;opacity: 1"; // стрелка в кружке 2
+	document.querySelector(".slide6_layer2__circle-arrow-one").style.cssText = "opacity: 1"; // стрелка в кружке 1
+	document.querySelector(".slide6_layer2__circle-arrow-two").style.cssText = "opacity: 1"; // стрелка в кружке 2
 	document.querySelector(".slide6__circle-img").style.cssText = "transition-delay: 4s; opacity: 1"; // кружок с пульсацией
 	document.querySelector(".slide6__circle-out").style.cssText = "transition-delay: 4.5s; opacity: 1"; // пульсация
 	document.querySelector(".slide6__main").style.cssText = "transition-delay: 1s; opacity: 1"; // колонка
@@ -431,6 +435,7 @@ let renderSeventhSlide = () => {
 
 // анимация - слайд 8
 let renderEigthSlide = () => {
+	document.querySelector(".header-right-main").style.cssText = "display: flex"; // ссылка на QR 
 	document.querySelector(".tree-image-senior").style.cssText = "opacity: 1; transform: translate3d(-42px, -262px, 0px) scale(1.95)"; // дерево
 	document.querySelector(".slide8__root1-senior").classList.add("animation__root-slide4"); // для анимации корней
 	document.querySelector(".slide8__root1-senior").style.cssText = "opacity: 1"; // корень 1
@@ -556,6 +561,8 @@ let fadeSeventhSlide = () => {
 }
 
 let fadeEigthSlide = () => {
+	document.querySelector(".header-right-main").style.cssText = "display: none"; // ссылка на QR 
+	document.querySelector(".header-right-back").style.cssText = "display: none"; // ссылка назад
 	document.querySelector(".slide8__root1-senior").style.cssText = "opacity: 0"; // корень 1
 	document.querySelector(".slide8__root2-senior").style.cssText = "opacity: 0"; // корень 2
 	document.querySelector(".slide8__root1-back").style.cssText = "opacity: 0"; // корень-бэк
@@ -579,8 +586,17 @@ let changeWithDirection = function () {
 	if (currentSlide !== "2" && currentSlide !== "3" && currentSlide !== "4" && currentSlide !== "5" && currentSlide !== "6") {
 		document.querySelector(".title-container").style.cssText = "opacity: 0"; // подзаг
 	}
-	if (currentSlide !== "2" && currentSlide !== "3" && currentSlide !== "4" && currentSlide !== "5" && currentSlide !== "6") {
-		document.querySelector(".slide2__bottom-container").style.cssText = "opacity: 0"; // кнопка
+	if (currentSlide !== "2") {
+		document.querySelector(".slide2__bottom-container").style.cssText = "opacity: 0; z-index: 0"; // кнопка
+	}
+	if (currentSlide !== "3") {
+		document.querySelector(".slide3__bottom-container").style.cssText = "opacity: 0; z-index: 0"; // кнопка
+	}
+	if (currentSlide !== "4" && currentSlide !== "5") {
+		document.querySelector(".slide4__bottom-container").style.cssText = "opacity: 0; z-index: 0"; // кнопка
+	}
+	if (currentSlide !== "6") {
+		document.querySelector(".slide6__bottom-container").style.cssText = "opacity: 0; z-index: 0"; // кнопка
 	}
 	if (currentSlide !== "4" && currentSlide !== "5") {
 		document.querySelector(".tree-image-middle").style.cssText = "opacity: 0"; // дерево
@@ -617,7 +633,7 @@ window.onload = function () {
 	document.querySelector(".swiper-button-prev").style.opacity = 0;
 	window.localStorage.setItem("activeSlide", "0");
 	renderZeroSlide();
-	hidePopup();
+	deletePopups();
 	renderPlayScroll();
 };
 
@@ -627,7 +643,7 @@ let changeStart = function () {
 	const bar = document.querySelector(".swiper-scrollbar-drag");
 	renderPlayScroll();
 	bar.className = "swiper-scrollbar-drag"
-		
+
 	if (swiper.activeIndex == 0) {
 		bar.style.transform = "translate3d(0px, 0px, 0px)"
 	} else if (swiper.activeIndex == 1) {
@@ -647,6 +663,7 @@ let changeStart = function () {
 	} else if (swiper.activeIndex == 8) {
 		bar.style.transform = "translate3d(1366px, 0px, 0px)"
 	}
+
 	fadeCurrentSlide();
 }
 
@@ -762,6 +779,7 @@ let fadeCurrentSlide = function () {
 let showNewSlide = function () {
 	toggleArrows();
 	fadeCurrentSlide();
+	document.querySelector(".overlay-qr").classList.remove("overlay-qr-show");
 
 	let currentSlide = window.localStorage.getItem("activeSlide");
 
@@ -799,7 +817,7 @@ let showNewSlide = function () {
 	if (currentSlide == "8") {
 		renderEigthSlide();
 	}
-	
+
 }
 
 // пропишем элемент play на скролле
@@ -818,19 +836,121 @@ button2.addEventListener("click", (e) => {
 	document.querySelector(".slide2__popup-container").style.opacity = "1";
 	document.querySelector(".slide2__button-arrow").style.display = "none";
 	document.querySelector(".slide2__button-arrow-wh").style.display = "block";
-	document.querySelector(".button_slide2").classList.add("button_slide2-pressed");
+	document.querySelector(".button_slide2").classList.add("button_pressed");
 	document.querySelector(".overlay").classList.add("overlay-show");
 });
 
-let hidePopup = () => {
+let hidePopup2 = () => {
 	document.querySelector(".slide2__popup-container").style.visibility = "hidden";
 	document.querySelector(".slide2__popup-container").style.opacity = "0";
 	document.querySelector(".slide2__button-arrow").style.display = "block";
 	document.querySelector(".slide2__button-arrow-wh").style.display = "none";
-	document.querySelector(".button_slide2").classList.remove("button_slide2-pressed");
+	document.querySelector(".button_slide2").classList.remove("button_pressed");
+	document.querySelector(".overlay").classList.remove("overlay-show");
+}
+let button3 = document.querySelector(".button_slide3");
+button3.addEventListener("click", (e) => {
+	document.querySelector(".slide3__popup-container").style.visibility = "visible";
+	document.querySelector(".slide3__popup-container").style.opacity = "1";
+	document.querySelector(".slide3__button-arrow").style.display = "none";
+	document.querySelector(".slide3__button-arrow-wh").style.display = "block";
+	document.querySelector(".button_slide3").classList.add("button_pressed");
+	document.querySelector(".overlay").classList.add("overlay-show");
+});
+
+let hidePopup3 = () => {
+	document.querySelector(".slide3__popup-container").style.visibility = "hidden";
+	document.querySelector(".slide3__popup-container").style.opacity = "0";
+	document.querySelector(".slide3__button-arrow").style.display = "block";
+	document.querySelector(".slide3__button-arrow-wh").style.display = "none";
+	document.querySelector(".button_slide3").classList.remove("button_pressed");
 	document.querySelector(".overlay").classList.remove("overlay-show");
 }
 
+let button4 = document.querySelector(".button_slide4");
+button4.addEventListener("click", (e) => {
+	document.querySelector(".slide4__popup-container").style.visibility = "visible";
+	document.querySelector(".slide4__popup-container").style.opacity = "1";
+	document.querySelector(".slide4__button-arrow").style.display = "none";
+	document.querySelector(".slide4__button-arrow-wh").style.display = "block";
+	document.querySelector(".button_slide4").classList.add("button_pressed");
+	document.querySelector(".overlay").classList.add("overlay-show");
+});
+
+let hidePopup4 = () => {
+	document.querySelector(".slide4__popup-container").style.visibility = "hidden";
+	document.querySelector(".slide4__popup-container").style.opacity = "0";
+	document.querySelector(".slide4__button-arrow").style.display = "block";
+	document.querySelector(".slide4__button-arrow-wh").style.display = "none";
+	document.querySelector(".button_slide4").classList.remove("button_pressed");
+	document.querySelector(".overlay").classList.remove("overlay-show");
+}
+
+let button6 = document.querySelector(".button_slide6");
+button6.addEventListener("click", (e) => {
+	document.querySelector(".slide6__popup-container").style.visibility = "visible";
+	document.querySelector(".slide6__popup-container").style.opacity = "1";
+	document.querySelector(".slide6__button-arrow").style.display = "none";
+	document.querySelector(".slide6__button-arrow-wh").style.display = "block";
+	document.querySelector(".button_slide6").classList.add("button_pressed");
+	document.querySelector(".overlay").classList.add("overlay-show");
+});
+
+let hidePopup6 = () => {
+	document.querySelector(".slide6__popup-container").style.visibility = "hidden";
+	document.querySelector(".slide6__popup-container").style.opacity = "0";
+	document.querySelector(".slide6__button-arrow").style.display = "block";
+	document.querySelector(".slide6__button-arrow-wh").style.display = "none";
+	document.querySelector(".button_slide6").classList.remove("button_pressed");
+	document.querySelector(".overlay").classList.remove("overlay-show");
+}
+
+let openbox = (id) => {
+	document.getElementById(id).style.display = 'block';
+	let img = document.querySelector(`.` + id + `-img`);
+	let imghover = document.querySelector(`.` + id + `-img-hover`);
+	let circle = document.querySelector(`.` + id + `-circle`);
+
+	img.style.opacity = "0";
+	imghover.style.opacity = "1";
+	circle.classList.add("circle-clicked");
+}
+
+let openqr = () => {
+	document.querySelector(".header-right-main").style.display = 'none';
+	document.querySelector(".header-right-back").style.display = 'flex';
+	document.querySelector(".overlay-qr").classList.add("overlay-qr-show");
+}
+
+let closeqr = () => {
+	document.querySelector(".header-right-main").style.display = 'flex';
+	document.querySelector(".header-right-back").style.display = 'none';
+	document.querySelector(".overlay-qr").classList.remove("overlay-qr-show");
+}
+
+let deletePopups = () => {
+	hidePopup2();
+	hidePopup3();
+	hidePopup4();
+	hidePopup6();
+	document.getElementById("box1").style.display = 'none';
+	document.getElementById("box2").style.display = 'none';
+	document.getElementById("box3").style.display = 'none';
+	document.getElementById("box4").style.display = 'none';
+	document.querySelector(".box1-img").style.opacity = "1";
+	document.querySelector(".box1-img-hover").style.opacity = "0";
+	document.querySelector(".box1-circle").classList.remove("circle-clicked");
+	document.querySelector(".box2-img").style.opacity = "1";
+	document.querySelector(".box2-img-hover").style.opacity = "0";
+	document.querySelector(".box2-circle").classList.remove("circle-clicked");
+	document.querySelector(".box3-img").style.opacity = "1";
+	document.querySelector(".box3-img-hover").style.opacity = "0";
+	document.querySelector(".box3-circle").classList.remove("circle-clicked");
+	document.querySelector(".box4-img").style.opacity = "1";
+	document.querySelector(".box4-img-hover").style.opacity = "0";
+	document.querySelector(".box4-circle").classList.remove("circle-clicked");
+}
+
 document.addEventListener('mouseup', () => {
-	hidePopup();
+	deletePopups();
 })

@@ -2,7 +2,6 @@
 <html lang="ru">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Описание страницы" />
@@ -27,6 +26,7 @@
 	<link rel="stylesheet" href="css/slide6.css">
 	<link rel="stylesheet" href="css/slide7.css">
 	<link rel="stylesheet" href="css/slide8.css">
+	<link rel="stylesheet" href="css/qr.css">
 	<script src="js/app.js" defer></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,14 +43,15 @@
 			<div class="header-left">
 				<img class="header-logo" src="img/logos/logo_top.svg" alt="лого">
 			</div>
+			<div class="header-right header-right-main">
+				<img class="doc-header" src="img/icons/document-filled.svg" alt="документ">
+				<a class="link-blue" onclick="openqr()">Инструкция по&nbsp;медицинскому применению ЛП</a>				
+			</div>
+			<div class="header-right header-right-back">
+				<img class="arrow-header" src="img/icons/arrow-header.svg" alt="←">
+				<a class="link-blue" onclick="closeqr()">Вернуться к&nbsp;просмотру</a>				
+			</div>	
 		</div>
-		<!--<nav class="header-right">
-		  <ul>
-			<li><a href="#">Удобство</a></li>
-			<li><a href="#">Эффективность</a></li>
-			<li><a href="#">Безопасность и&nbsp;переносимость</a></li>
-		</ul>
-		</nav>-->
 	</header>
 
 	<!--main-->
@@ -59,6 +60,101 @@
 			<div class="swiper slider">
 				<div class="overlay"></div>
 
+				<!--qr-->
+				<div class="overlay-qr">
+					<div class="qr">
+						<img class="qr__leaf1" src="img/leaves/leaf21.png" alt="лист">		
+						<img class="qr__leaf2" src="img/leaves/leaf22.png" alt="лист">	
+						<img class="qr__leaf3" src="img/leaves/leaf23.png" alt="лист">	
+						<div class="qr_top">
+							Ссылки на Государственный реестр лекарственных средств
+						</div>
+						<div class="qr_main">
+							<div class="qr_main-left">
+								<div class="qr_main-title qr_main-title-left">
+									<h2>Инструкция по медицинскому<br>применению ЛП Глюкофаж® Лонг</h2>
+								</div>
+							
+								<div class="qr_main-one">
+									<div class="qr_main-header-back qr_main-header-back-one">
+									</div>
+									<div class="qr_main-header-text qr_main-header-text-one">
+										1000 мг
+									</div>	
+									<img class="qr_main-img" src="img/qr/qr1.png" alt="QR код">									
+								</div>
+								<div class="qr_main-two">
+									<div class="qr_main-header-back qr_main-header-back-two">
+									</div>
+									<div class="qr_main-header-text qr_main-header-text-two">
+										750 мг
+									</div>	
+									<img class="qr_main-img" src="img/qr/qr2.png" alt="QR код">									
+								</div>
+								<div class="qr_main-three">
+									<div class="qr_main-header-back qr_main-header-back-three">
+									</div>
+									<div class="qr_main-header-text qr_main-header-text-three">
+										500 мг
+									</div>	
+									<img class="qr_main-img" src="img/qr/qr3.png" alt="QR код">									
+								</div>
+
+								<div class="qr_main-footer qr_main-footer-left">
+									Номера РУ : <br>
+									Глюкофаж Лонг 500 мг LP-No(005399)-(RG-RU)<br>
+									Глюкофаж Лонг 750 мг LP-No(005896)-(RG-RU)<br>
+									Глюкозаж Лонг 1000 мг -LP-No(005878)-(RG-RU)
+								</div>	
+							</div>	
+
+							<div class="qr_main-center">	
+								<img class="qr__line" src="img/qr/line.png" alt="линия">
+								<div class="qr_main-title qr_main-title-center">
+									<h2>Глюкованс®</h2>
+								</div>
+							
+								<div class="qr_main-four">
+									<div class="qr_main-header-back qr_main-header-back-four">
+									</div>
+									<div class="qr_main-header-text qr_main-header-text-four">
+										2,5мг/500мг; 5мг/500мг
+									</div>	
+									<img class="qr_main-img qr_main-img-center" src="img/qr/qr4.png" alt="QR код">									
+								</div>								
+
+								<div class="qr_main-footer qr_main-footer-center">
+									ЛП-№(004241)-(РГ-RU)<br>
+									от 10.01.2024
+								</div>	
+							</div>	
+
+							<div class="qr_main-right">	
+								<img class="qr__line" src="img/qr/line.png" alt="линия">
+								<div class="qr_main-title qr_main-title-right">
+									<h2>Инвокана®</h2>
+								</div>
+							
+								<div class="qr_main-five">
+									<div class="qr_main-header-back qr_main-header-back-five">
+									</div>
+									<div class="qr_main-header-text qr_main-header-text-five">
+										100 мг, 300 мг
+									</div>	
+									<img class="qr_main-img qr_main-img-right" src="img/qr/qr5.png" alt="QR код">									
+								</div>								
+
+								<div class="qr_main-footer qr_main-footer-right">
+									ЛП-N (003925)-(РГ-RU)<br>
+									от 23.09.2024
+								</div>	
+							</div>	
+
+						</div>
+					</div>
+				</div>
+				<!--/qr-->
+
 				<!--moving elements-->
 				<div class="swiper-wrapper slider__wrapper">
 
@@ -66,7 +162,6 @@
 					<div class="swiper-slide slider__item " data-history="slide0">
 
 						<div class="slider__layer slide0_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide0</div>
 						</div>
 						<div class="slider__layer slide0_layer5" data-swiper-parallax="65%">
 							<img class="slide0_layer5__leaf2" src="img/leaves/leaf2.png" alt="лист">
@@ -169,7 +264,6 @@
 					<div class="swiper-slide slider__item" data-history="slide1">
 
 						<div class="slider__layer slide1_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide1</div>
 						</div>
 						<div class="slider__layer slide1_layer5" data-swiper-parallax="65%">
 							<img class="slide1_layer5__leaf2" src="img/leaves/leaf3_1.png" alt="лист">
@@ -336,7 +430,6 @@
 					<!--slide2-->
 					<div class="swiper-slide slider__item" data-history="slide2">
 						<div class="slider__layer slide2_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide2</div>
 						</div>
 						<div class="slider__layer slide2_layer2" data-swiper-parallax="65%">
 							<img class="slide2_layer2__cloud1" src="img/clouds/cloud1.png" alt="облако">
@@ -488,7 +581,6 @@
 					<!--slide3-->
 					<div class="swiper-slide slider__item" data-history="slide3">
 						<div class="slider__layer slide3_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide3</div>
 						</div>
 						<div class="slider__layer slide3_layer2" data-swiper-parallax="65%">
 							<img class="slide2_layer2__cloud1" src="img/clouds/cloud1.png" alt="облако">
@@ -558,7 +650,6 @@
 					<!--slide4-->
 					<div class="swiper-slide slider__item" data-history="slide4">
 						<div class="slider__layer slide4_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide4</div>
 						</div>
 						<div class="slider__layer slide4_layer2" data-swiper-parallax="65%">
 							<img class="slide4_layer2__cloud1" src="img/clouds/cloud2.png" alt="облако">
@@ -641,7 +732,6 @@
 					<!--slide5-->
 					<div class="swiper-slide slider__item" data-history="slide5">
 						<div class="slider__layer slide4_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide5</div>
 						</div>
 						<div class="slider__layer slide4_layer2" data-swiper-parallax="65%">
 							<img class="slide5__poly" src="img/background/back_polygon2.svg" alt="полигон">
@@ -676,11 +766,13 @@
 								</div>
 							</div>
 
-							<div class="slide5_layer2__circle-arrow slide5_layer2__circle-arrow-one">								
-								<img class="slide5_layer2__circle-arrow-img" src="img/icons/arrow.svg" alt="стрелка в кружке">					
+							<div class="slide5_layer2__circle-arrow slide5_layer2__circle-arrow-one box1-circle">								
+								<img class="slide5_layer2__circle-arrow-img box1-img" src="img/icons/arrow.svg" alt="стрелка в кружке">			
+								<img class="slide5_layer2__circle-arrow-img-hover box1-img-hover" src="img/icons/arrow-wh.svg" alt="стрелка в кружке">					
 							</div>
-							<div class="slide5_layer2__circle-arrow slide5_layer2__circle-arrow-two">								
-								<img class="slide5_layer2__circle-arrow-img" src="img/icons/arrow.svg" alt="стрелка в кружке">					
+							<div class="slide5_layer2__circle-arrow slide5_layer2__circle-arrow-two box2-circle">								
+								<img class="slide5_layer2__circle-arrow-img box2-img" src="img/icons/arrow.svg" alt="стрелка в кружке">		
+								<img class="slide5_layer2__circle-arrow-img-hover box2-img-hover" src="img/icons/arrow-wh.svg" alt="стрелка в кружке">			
 							</div>
 
 							<div class="slide5__main">								
@@ -722,7 +814,7 @@
 										<div class="slide5__bigdot-four-pulse"></div>
 									</div>
 									<div class="slide5__main-four-dottext slide5__text-four">
-										<a class="link-blue" href="#">Cнижение риска смерти, связанной с&nbsp;СД</a>									
+										<a class="link-blue" onclick="openbox('box1')">Cнижение риска смерти, связанной с&nbsp;СД</a>									
 									</div>
 								</div>	
 								<div class="slide5__main-five">
@@ -735,7 +827,7 @@
 										<div class="slide5__bigdot-five-pulse"></div>
 									</div>
 									<div class="slide5__main-five-dottext slide5__text-five">
-										<a class="link-blue" href="#">Cнижение риска смерти от&nbsp;любых причин</a>								
+										<a class="link-blue" onclick="openbox('box2')">Cнижение риска смерти от&nbsp;любых причин</a>								
 									</div>
 								</div>															
 							</div>	
@@ -746,7 +838,6 @@
 					<!--slide6-->
 					<div class="swiper-slide slider__item" data-history="slide6">
 						<div class="slider__layer slide4_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide6</div>
 						</div>
 						<div class="slider__layer slide4_layer2" data-swiper-parallax="65%">
 							<img class="slide6__poly" src="img/background/back_polygon3.svg" alt="полигон">
@@ -771,12 +862,14 @@
 										сохранение "эффекта наследия" в&nbsp;группе метформина даже спустя 24&nbsp;года наблюдения</h2>
 								</div>
 							</div>
-
-							<div class="slide6_layer2__circle-arrow slide6_layer2__circle-arrow-one">								
-								<img class="slide5_layer2__circle-arrow-img" src="img/icons/arrow.svg" alt="стрелка в кружке">					
+							
+							<div class="slide6_layer2__circle-arrow slide6_layer2__circle-arrow-one box3-circle">								
+								<img class="slide5_layer2__circle-arrow-img box3-img" src="img/icons/arrow.svg" alt="стрелка в кружке">
+								<img class="slide5_layer2__circle-arrow-img-hover box3-img-hover" src="img/icons/arrow-wh.svg" alt="стрелка в кружке">				
 							</div>
-							<div class="slide6_layer2__circle-arrow slide6_layer2__circle-arrow-two">								
-								<img class="slide6_layer2__circle-arrow-img" src="img/icons/arrow.svg" alt="стрелка в кружке">					
+							<div class="slide6_layer2__circle-arrow slide6_layer2__circle-arrow-two box4-circle">								
+								<img class="slide6_layer2__circle-arrow-img box4-img" src="img/icons/arrow.svg" alt="стрелка в кружке">	
+								<img class="slide6_layer2__circle-arrow-img-hover box4-img-hover" src="img/icons/arrow-wh.svg" alt="стрелка в кружке">					
 							</div>
 
 							<div class="slide6__main">	
@@ -810,7 +903,7 @@
 										<div class="slide6__bigdot-four-pulse"></div>
 									</div>
 									<div class="slide6__main-four-dottext slide6__text-four">
-										<a class="link-blue" href="#">Снижение риска смертности от&nbsp;любых причин</a>									
+										<a class="link-blue"  onclick="openbox('box3')">Снижение риска смертности от&nbsp;любых причин</a>									
 									</div>
 								</div>	
 								<div class="slide6__main-five">
@@ -823,7 +916,7 @@
 										<div class="slide6__bigdot-five-pulse"></div>
 									</div>
 									<div class="slide6__main-five-dottext slide6__text-five">
-										<a class="link-blue" href="#">Снижение риска инфаркта миокарда</a>								
+										<a class="link-blue"  onclick="openbox('box4')">Снижение риска инфаркта миокарда</a>								
 									</div>
 								</div>	
 							</div>
@@ -834,7 +927,6 @@
 					<!--slide7-->
 					<div class="swiper-slide slider__item" data-history="slide7">
 						<div class="slider__layer slide4_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide7</div>
 						</div>
 						<div class="slider__layer slide7_layer2" data-swiper-parallax="65%">
 							<img class="slide7__poly" src="img/background/back_polygon4.svg" alt="полигон">
@@ -883,7 +975,6 @@
 					<!--slide8-->
 					<div class="swiper-slide slider__item" data-history="slide8">
 						<div class="slider__layer slide4_layer1" data-swiper-parallax="85%">
-							<div class="title-text">slide8</div>
 						</div>
 						<div class="slider__layer slide8_layer2" data-swiper-parallax="65%">
 							<img class="slide8__poly" src="img/background/back_polygon6.svg" alt="полигон">
@@ -903,7 +994,24 @@
 				</div>
 
 				<!--position: absolute elements-->
-				<div class="fix">
+				<div class="fix">	
+					<div id="box1" class="graphics graphics-box1">
+						<img src="img/screen-5/graphics.png" alt="график">	
+						<img class="graphics-arrow graphics-arrow-box1" src="img/icons/arrow_graphics1.svg" alt="стрелка влево">	
+					</div>
+					<div id="box2" class="graphics graphics-box2">
+						<img src="img/screen-5/graphics2.png" alt="график">	
+						<img class="graphics-arrow graphics-arrow-box2" src="img/icons/arrow_graphics2.svg" alt="стрелка влево">	
+					</div>
+					<div id="box3" class="graphics graphics-box3">
+						<img src="img/screen-6/graphics.png" alt="график">	
+						<img class="graphics-arrow graphics-arrow-box3" src="img/icons/arrow_graphics3.svg" alt="стрелка влево">							
+					</div>
+					<div id="box4" class="graphics graphics-box4">
+						<img src="img/screen-6/graphics2.png" alt="график">	
+						<img class="graphics-arrow graphics-arrow-box4" src="img/icons/arrow_graphics4.svg" alt="стрелка влево">	
+					</div>
+
 					<div class="slide2__roots">
 						<img class="slide2__root1-intern" src="img/tree/intern_root1.png" alt="корень">
 						<img class="slide2__root2-intern" src="img/tree/intern_root2.png" alt="корень">
@@ -955,7 +1063,7 @@
 						</div>
 					</div>
 					
-					<img class="slide3__poly" src="img/background/back_polygon.svg" alt="полигон">
+					<img class="slide3__poly" src="img/background/back_polygon.svg" alt="полигон">					
 					
 					<div class="slide6__circle-container">
 						<img class="slide6__circle-img circle-img" src="img/icons/circle3.png"
@@ -1020,55 +1128,192 @@
 				<div class="swiper-scrollbar"></div>
 			</div>
 
-			<div class="slide2__bottom-container">
+			<div class="bottom-container slide2__bottom-container">
 				<!--button-->
-				<div class="slide2__bottom-button">
-					<button class="button_slide2">
-						<img  class="slide2__button-arrow" src="img/buttons/button_arrow.svg" alt="➾">
-						<img  class="slide2__button-arrow-wh" src="img/buttons/button_arrow-wh.svg" alt="➾">
-						<div class="slide2__button-text">
+				<div class="bottom-button">
+					<button class="button_slide2 button_slide">
+						<img  class="slide2__button-arrow button-arrow" src="img/buttons/button_arrow.svg" alt="➾">
+						<img  class="slide2__button-arrow-wh button-arrow-wh" src="img/buttons/button_arrow-wh.svg" alt="➾">
+						<div class="button-text">
 							Интересные факты
 						</div>
 					</button>
 				</div>
-				<!--popup-->
-				<div class="slide2__popup-container">
-					<img  class="slide2__popup-line" src="img/screen-2/line-and-dot.png" alt="линия">
-					<div class="slide2__popup-header">
-						<div class="slide2__popup-header-year">
+				<!--popup 1977-->
+				<div class="slide2__popup-container popup-container">
+					<img  class="popup-line" src="img/screen-2/line-and-dot.png" alt="линия">
+					<div class="popup-header">
+						<div class="popup-header-year">
 							1977
 						</div>
-						<div class="slide2__popup-header-text">
+						<div class="popup-header-text">
 							Интересные факты
 						</div>
 					</div>
-					<div class="slide2__popup-main">
-						<div class="slide2__popup-main-block">
-							<img class="slide2__popup-main-block_pic" src="img/screen-2/image1.png" alt="pic1">	
-							<p class="slide2__popup-main-block_text">
+					<div class="popup-main">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-2/image1.png" alt="pic1">	
+							<p class="popup-main-block_text">
 								Открыты кольца Урана
 							</p>						
 						</div>
-						<div class="slide2__popup-main-block">
-							<img class="slide2__popup-main-block_pic" src="img/screen-2/image2.png" alt="pic1">	
-							<p class="slide2__popup-main-block_text">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-2/image2.png" alt="pic2">	
+							<p class="popup-main-block_text">
 								Сразу две песни Queen «We&nbsp;will Rock You» и&nbsp;«We&nbsp;Are The&nbsp;Champions» стали лучшими в&nbsp;году
 							</p>
 						</div>
-						<div class="slide2__popup-main-block">
-							<img class="slide2__popup-main-block_pic" src="img/screen-2/image3.png" alt="pic1">	
-							<p class="slide2__popup-main-block_text">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-2/image3.png" alt="pic3">	
+							<p class="popup-main-block_text">
 								Атомоход «Арктика» первым из&nbsp;надводных кораблей достиг Северного полюса Земли
 							</p>
 						</div>
-						<div class="slide2__popup-main-block">	
-							<img class="slide2__popup-main-block_pic" src="img/screen-2/image4.png" alt="pic1">	
-							<p class="slide2__popup-main-block_text">
+						<div class="popup-main-block">	
+							<img class="popup-main-block_pic" src="img/screen-2/image4.png" alt="pic4">	
+							<p class="popup-main-block_text">
 								Опубликована повесть Кира Булычева «Сто лет тому вперёд»
 							</p>
 						</div>
 					</div>
+				</div>				
+			</div>
+
+			<div class="slide3__bottom-container bottom-container">
+				<!--button-->
+				<div class="bottom-button">
+					<button class="button_slide3 button_slide">
+						<img  class="slide3__button-arrow button-arrow" src="img/buttons/button_arrow.svg" alt="➾">
+						<img  class="slide3__button-arrow-wh button-arrow-wh" src="img/buttons/button_arrow-wh.svg" alt="➾">
+						<div class="button-text">
+							Интересные факты
+						</div>
+					</button>
 				</div>
+				<!--popup 1997-->
+				<div class="slide3__popup-container popup-container">
+					<img  class="popup-line" src="img/screen-2/line-and-dot.png" alt="линия">
+					<div class="popup-header">
+						<div class="popup-header-year">
+							1997
+						</div>
+						<div class="popup-header-text">
+							Интересные факты
+						</div>
+					</div>
+					<div class="popup-main">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-3/image1.png" alt="pic1">	
+							<p class="popup-main-block_text">
+								Компания «Intel» официально представила микропроцессор Pentium II
+							</p>						
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-3/image2.png" alt="pic2">	
+							<p class="popup-main-block_text">
+								Альбом «Spice» группы Spice Girls стал самым продаваемым в&nbsp;США и&nbsp;Великобритании
+							</p>
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-3/image3.png" alt="pic3">	
+							<p class="popup-main-block_text">
+								Опубликован роман Джоан Роулинг «Гарри Поттер и&nbsp;философский камень»
+							</p>
+						</div>						
+					</div>
+				</div>				
+			</div>
+
+			<div class="slide4__bottom-container bottom-container">
+				<!--button-->
+				<div class="bottom-button">
+					<button class="button_slide4 button_slide">
+						<img  class="slide4__button-arrow button-arrow" src="img/buttons/button_arrow.svg" alt="➾">
+						<img  class="slide4__button-arrow-wh button-arrow-wh" src="img/buttons/button_arrow-wh.svg" alt="➾">
+						<div class="button-text">
+							Интересные факты
+						</div>
+					</button>
+				</div>
+				<!--popup 2007-->
+				<div class="slide4__popup-container popup-container">
+					<img  class="popup-line" src="img/screen-2/line-and-dot.png" alt="линия">
+					<div class="popup-header">
+						<div class="popup-header-year">
+							2007
+						</div>
+						<div class="popup-header-text">
+							Интересные факты
+						</div>
+					</div>
+					<div class="popup-main">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-4/image1.png" alt="pic1">	
+							<p class="popup-main-block_text">
+								Крейгом Вентером создан первый экземпляр искусственного генома
+							</p>						
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-4/image2.png" alt="pic2">	
+							<p class="popup-main-block_text">
+								Сочи избран столицей Зимних Олимпийских игр 2014&nbsp;года
+							</p>
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-4/image3.png" alt="pic3">	
+							<p class="popup-main-block_text">
+								Led Zeppelin возродилась в&nbsp;«золотом» составе, за&nbsp;барабаны сел сын погибшего барабанщика Джона Бонэма Джэйсон Бонэм
+							</p>
+						</div>
+						
+					</div>
+				</div>				
+			</div>
+
+			<div class="slide6__bottom-container bottom-container">
+				<!--button-->
+				<div class="bottom-button">
+					<button class="button_slide6 button_slide">
+						<img  class="slide6__button-arrow button-arrow" src="img/buttons/button_arrow.svg" alt="➾">
+						<img  class="slide6__button-arrow-wh button-arrow-wh" src="img/buttons/button_arrow-wh.svg" alt="➾">
+						<div class="button-text">
+							Интересные факты
+						</div>
+					</button>
+				</div>
+				<!--popup 2024-->
+				<div class="slide6__popup-container popup-container">
+					<img  class="popup-line" src="img/screen-2/line-and-dot.png" alt="линия">
+					<div class="popup-header">
+						<div class="popup-header-year">
+							2024
+						</div>
+						<div class="popup-header-text">
+							Интересные факты
+						</div>
+					</div>
+					<div class="popup-main">
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-6/image1.png" alt="pic1">	
+							<p class="popup-main-block_text">
+								Илон Маск впервые имплантировал микрочип Neuralink человеку
+							</p>						
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-6/image2.png" alt="pic2">	
+							<p class="popup-main-block_text">
+								Песня Билли Айлиш «What Was I&nbsp;Made For?» выиграла все три главные киномузыкальные награды (Грэмми, Золотой глобус, Оскар)
+							</p>
+						</div>
+						<div class="popup-main-block">
+							<img class="popup-main-block_pic" src="img/screen-6/image3.png" alt="pic3">	
+							<p class="popup-main-block_text">
+								Препарат Ленакапавир против ВИЧ показал эффективность в&nbsp;99&nbsp;% случаев
+							</p>
+						</div>
+						
+					</div>
+				</div>				
 			</div>
 
 		</section>

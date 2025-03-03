@@ -30,13 +30,13 @@
     height: 159px;
     opacity: 1;
     margin-bottom: 5px;
-    -webkit-animation: animatedBackground5 80s linear forwards infinite;
-    animation: animatedBackground5 80s linear forwards infinite;
+    -webkit-animation: animatedBackground5 320s linear forwards infinite;
+    animation: animatedBackground5 320s linear forwards infinite;
 }
 
 @-webkit-keyframes animatedBackground5 {
     from {
-        transform: translateX(-3000px);
+        transform: translateX(-2000px);
     }
 
     to {
@@ -46,7 +46,7 @@
 
 @keyframes animatedBackground5 {
     from {
-        transform: translateX(-4000px);
+        transform: translateX(-2000px);
     }
 
     to {
@@ -58,27 +58,27 @@
     height: 223px;
     opacity: 1;
     margin-bottom: -65px;
-    -webkit-animation: animatedBackground4 70s linear forwards infinite;
-    animation: animatedBackground4 70s linear forwards infinite;
+    -webkit-animation: animatedBackground4 320s linear forwards infinite;
+    animation: animatedBackground4 320s linear forwards infinite;
 }
 
 @-webkit-keyframes animatedBackground4 {
     from {
-        transform: translateX(-3000px);
+        transform: translateX(-1000px);
     }
 
     to {
-        transform: translateX(1000px);
+        transform: translateX(3000px);
     }
 }
 
 @keyframes animatedBackground4 {
     from {
-        transform: translateX(-3000px);
+        transform: translateX(-1000px);
     }
 
     to {
-        transform: translateX(1000px);
+        transform: translateX(3000px);
     }
 }
 

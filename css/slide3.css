@@ -45,8 +45,8 @@
     height: 159px;
     opacity: 1;
     margin-bottom: 44px;
-    -webkit-animation: animatedBackground3 80s linear forwards infinite;
-    animation: animatedBackground3 80s linear forwards infinite;
+    -webkit-animation: animatedBackground3 320s linear forwards infinite;
+    animation: animatedBackground3 320s linear forwards infinite;
 }
 
 @-webkit-keyframes animatedBackground3 {

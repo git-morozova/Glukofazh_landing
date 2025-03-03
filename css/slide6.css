@@ -83,6 +83,12 @@
     left: 8px;
     top: 12px;
 }
+.slide6_layer2__circle-arrow-img-hover {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    opacity: 0;
+}
 .slide6_layer2__circle-arrow-one {
     top: 538px;
 }
