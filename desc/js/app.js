@@ -95,7 +95,7 @@ let renderZeroSlide = () => {
 	document.querySelector(".slide0_layer3__nuts").style.cssText = "opacity: 1"; // желуди
 
 	document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 1"; // кружок с пульсацией
-	document.querySelector(".slide0_layer3__circle-out").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация
+	document.querySelector(".slide0_layer3__circle-gif").style.cssText = "transition-delay: 1.5s; opacity: 1"; // анимация кружка с пульсацией
 	document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 1"; // линии
 
 	setTimeout(function () {
@@ -121,16 +121,16 @@ let renderFirstSlide = () => {
 	document.querySelector(".slide1_layer3__line-container").style.cssText = "opacity: 1"; // кружки с пульсацией
 	document.querySelector(".slide1_layer3__circle-img-first").style.cssText = "transition-delay: 0s; opacity: 1"; // кружок 1
 	document.querySelector(".slide1_layer4__info-first").style.cssText = "transition-delay: 1.5s; opacity: 1; transform:translate3d(0px, 0px, 0px)"; // текст 1
-	document.querySelector(".slide1_layer3__circle-out-first").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация 1
+	document.querySelector(".slide1_layer3__circle-gif-first").style.cssText = "transition-delay: 1.5s; opacity: 1"; // анимация кружка с пульсацией 1
 	document.querySelector(".slide1_layer3__circle-img-second").style.cssText = "transition-delay: 2.5s; opacity: 1"; // кружок 2
 	document.querySelector(".slide1_layer4__info-second").style.cssText = "transition-delay: 2.5s; opacity: 1; transform:translate3d(0px, 0px, 0px)"; // текст 2
-	document.querySelector(".slide1_layer3__circle-out-second").style.cssText = "transition-delay: 4s; opacity: 1"; // пульсация 2
+	document.querySelector(".slide1_layer3__circle-gif-second").style.cssText = "transition-delay: 4s; opacity: 1"; // анимация кружка с пульсацией 2
 	document.querySelector(".slide1_layer3__circle-img-third").style.cssText = "transition-delay: 4.2s; opacity: 1"; // кружок 3
 	document.querySelector(".slide1_layer4__info-third").style.cssText = "transition-delay: 4.2s; opacity: 1; transform:translate3d(0px, 0px, 0px)"; // текст 3
-	document.querySelector(".slide1_layer3__circle-out-third").style.cssText = "transition-delay: 5.7s; opacity: 1"; // пульсация 3
+	document.querySelector(".slide1_layer3__circle-gif-third").style.cssText = "transition-delay: 5.7s; opacity: 1"; // анимация кружка с пульсацией 3
 	document.querySelector(".slide1_layer3__circle-img-fourth").style.cssText = "transition-delay: 5.9s; opacity: 1"; // кружок 4
 	document.querySelector(".slide1_layer4__info-fourth").style.cssText = "transition-delay: 5.9s; opacity: 1; transform:translate3d(0px, 0px, 0px)"; // текст 4
-	document.querySelector(".slide1_layer3__circle-out-fourth").style.cssText = "transition-delay: 7.4s; opacity: 1"; // пульсация 4	
+	document.querySelector(".slide1_layer3__circle-gif-fourth").style.cssText = "transition-delay: 7.4s; opacity: 1"; // анимация кружка с пульсацией 4	
 	document.querySelector(".slide1_layer5__lines").style.cssText = "opacity: 1"; // линии		
 
 	setTimeout(function () {
@@ -154,7 +154,7 @@ let renderSecondSlide = () => {
 	document.querySelector(".slide2__top-container-line").style.cssText = "opacity: 1"; // полоска около зага
 	document.querySelector(".slide2__top-container-title").style.cssText = "opacity: 1"; // заг
 	document.querySelector(".slide2__circle-img").style.cssText = "opacity: 1"; // кружок с пульсацией
-	document.querySelector(".slide2__circle-out").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация	
+	document.querySelector(".slide2__circle-gif").style.cssText = "transition-delay: 1.5s; opacity: 1"; // пульсация	
 	document.querySelector(".slide2__main-col-left").style.cssText = "transition-delay: 1s; opacity: 1; transform:translate3d(0px, 0px, 0px)"; // левая колонка
 	document.querySelector(".slide2__main-col-right").style.cssText = "transition-delay: 1s; opacity: 1"; // правая колонка
 	document.querySelector(".slide2_layer2__line").style.cssText = "transition-delay: 1.5s;opacity: 1"; // линия вертикальная
@@ -322,7 +322,7 @@ let renderFifthSlide = () => {
 	document.querySelector(".slide5_layer2__circle-arrow-one").style.cssText = "opacity: 1"; // стрелка в кружке 1
 	document.querySelector(".slide5_layer2__circle-arrow-two").style.cssText = "opacity: 1"; // стрелка в кружке 2
 	document.querySelector(".slide5__circle-img").style.cssText = "transition-delay: 2s; opacity: 1"; // кружок с пульсацией
-	document.querySelector(".slide5__circle-out").style.cssText = "transition-delay: 2.5s; opacity: 1"; // пульсация
+	document.querySelector(".slide5__circle-gif").style.cssText = "transition-delay: 2.5s; opacity: 1"; // пульсация
 	document.querySelector(".slide5__main").style.cssText = "transition-delay: 1s; opacity: 1"; // колонка
 
 	document.querySelector(".slide5__back-one").style.cssText = "transition-delay: 1s; width: 694px; opacity: 1";  // бэк 1
@@ -374,7 +374,7 @@ let renderSixthSlide = () => {
 	document.querySelector(".slide6_layer2__circle-arrow-one").style.cssText = "opacity: 1"; // стрелка в кружке 1
 	document.querySelector(".slide6_layer2__circle-arrow-two").style.cssText = "opacity: 1"; // стрелка в кружке 2
 	document.querySelector(".slide6__circle-img").style.cssText = "transition-delay: 4s; opacity: 1"; // кружок с пульсацией
-	document.querySelector(".slide6__circle-out").style.cssText = "transition-delay: 4.5s; opacity: 1"; // пульсация
+	document.querySelector(".slide6__circle-gif").style.cssText = "transition-delay: 4.5s; opacity: 1"; // пульсация
 	document.querySelector(".slide6__main").style.cssText = "transition-delay: 1s; opacity: 1"; // колонка
 
 	document.querySelector(".slide6__back-one").style.cssText = "transition-delay: 1s; width: 766px; opacity: 1";  // бэк 1
@@ -469,9 +469,8 @@ let fadeZeroSlide = () => {
 	document.querySelector(".slide0__main-container").style.cssText = "opacity: 0"; // заг	
 	document.querySelector(".slide0_layer3__nuts").style.cssText = "opacity: 0"; // желуди
 	document.querySelector(".slide0_layer3__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
-	document.querySelector(".slide0_layer3__circle-out").style.cssText = "opacity: 0"; // пульсация
-	document.querySelector(".slide0_layer5__lines").style.cssText = "opacity: 0"; // линии
-	document.querySelector(".slide0_layer5__line-wh").style.cssText = "opacity: 0"; // линия-бэк	
+	document.querySelector(".slide0_layer3__circle-gif").style.cssText = "opacity: 0"; // пульсация	
+	document.querySelector(".slide0_layer5__line-top").classList.remove("animation__move-img"); // для анимации линий
 }
 
 let fadeFirstSlide = () => {
@@ -479,9 +478,10 @@ let fadeFirstSlide = () => {
 	document.querySelector(".slide1__main-container-text").style.cssText = "opacity: 0"; // текст справа от зага
 	document.querySelector(".slide1__main-container-line").style.cssText = "opacity: 0"; // полоска около зага
 	document.querySelector(".slide1__title-container").style.cssText = "opacity: 0"; // подзаг
-	document.querySelector(".slide1_layer5__lines").style.cssText = "opacity: 0"; // линии	
 	document.querySelector(".slide1_layer3__line-container").style.cssText = "opacity: 0"; // кружки с пульсацией
-	document.querySelector(".slide1_layer4__info-container").style.cssText = "opacity: 0"; // подзаг - слой для обработки быстрого появления	
+	document.querySelector(".slide1_layer4__info-container").style.cssText = "opacity: 0"; // подзаг - слой для обработки быстрого появления
+	document.querySelector(".slide1_layer5__line").classList.remove("animation__line-slide1"); // для анимации линий	
+	document.querySelector(".slide1_layer5__line").classList.remove("animation__move-img-slide1"); // для анимации линий
 }
 
 let fadeSecondSlide = () => {
@@ -489,7 +489,7 @@ let fadeSecondSlide = () => {
 	document.querySelector(".slide2__top-container-line").style.cssText = "opacity: 0"; // полоска около зага
 	document.querySelector(".slide2__top-container-title").style.cssText = "opacity: 0"; // заг	
 	document.querySelector(".slide2__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
-	document.querySelector(".slide2__circle-out").style.cssText = "opacity: 0"; // пульсация
+	document.querySelector(".slide2__circle-gif").style.cssText = "opacity: 0"; // пульсация
 	document.querySelector(".slide2__main-col-left").style.cssText = "opacity: 0"; // левая колонка
 	document.querySelector(".slide2__main-col-right").style.cssText = "opacity: 0"; // правая колонка
 	document.querySelector(".slide2_layer2__line").style.cssText = "opacity: 0"; // линия вертикальная
@@ -497,6 +497,13 @@ let fadeSecondSlide = () => {
 	document.querySelector(".slide2__root2-intern").style.cssText = "opacity: 0"; // корень 2
 	document.querySelector(".slide2__root3-intern").style.cssText = "opacity: 0"; // корень 3	
 	document.querySelector(".slide2__root1-back").style.cssText = "opacity: 0"; // корень-бэк
+	document.querySelector(".slide2__root1-intern").classList.remove("animation__move-img2"); // для анимации корней
+	document.querySelector(".slide2__dot-seven-pulse").classList.remove("animation-dot-pulse"); // анимация точки 7
+	document.querySelector(".slide2__dot-eight-pulse").classList.remove("animation-dot-pulse"); // анимация точки 8
+	document.querySelector(".slide2__dot-nine-pulse").classList.remove("animation-dot-pulse"); // анимация точки 9
+	document.querySelector(".slide2__dot-eleven-pulse").classList.remove("animation-dot-pulse"); // анимация точки 11
+	document.querySelector(".slide2__dot-twelve-pulse").classList.remove("animation-dot-pulse"); // анимация точки 12
+	document.querySelector(".slide2__dot-thirteen-pulse").classList.remove("animation-dot-pulse"); // анимация точки 13
 }
 
 let fadeThirdSlide = () => {
@@ -508,6 +515,11 @@ let fadeThirdSlide = () => {
 	document.querySelector(".slide3__top-container-line").style.cssText = "opacity: 0"; // полоска около зага
 	document.querySelector(".slide3__top-container-title").style.cssText = "opacity: 0"; // заг
 	document.querySelector(".slide3__main").style.cssText = "opacity: 0"; // правая колонка
+	document.querySelector(".slide3__bigdot-two-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 2
+	document.querySelector(".slide3__bigdot-three-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 3
+	document.querySelector(".slide3__bigdot-four-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 4
+	document.querySelector(".slide3__dot-five-pulse").classList.remove("animation-dot-pulse"); // анимация точки 5
+	document.querySelector(".slide3__root1-junior").classList.remove("animation__move-img3"); // для анимации корней
 }
 
 let fadeFourthSlide = () => {
@@ -518,6 +530,10 @@ let fadeFourthSlide = () => {
 	document.querySelector(".slide4__top-container-title").style.cssText = "opacity: 0"; // заг
 	document.querySelector(".slide4__main").style.cssText = "opacity: 0"; // колонка
 	document.querySelector(".slide4_layer2__line").style.cssText = "opacity: 0"; // линия вертикальная
+	document.querySelector(".slide4__dot-five-pulse").classList.remove("animation-dot-pulse"); // анимация точки 5
+	document.querySelector(".slide4__dot-six-pulse").classList.remove("animation-dot-pulse"); // анимация точки 6
+	document.querySelector(".slide4__dot-seven-pulse").classList.remove("animation-dot-pulse"); // анимация точки 7
+	document.querySelector(".slide4__root1-middle").classList.remove("animation__move-img4"); // для анимации корней
 }
 
 let fadeFifthSlide = () => {
@@ -530,7 +546,12 @@ let fadeFifthSlide = () => {
 	document.querySelector(".slide5_layer2__circle-arrow-two").style.cssText = "opacity: 0"; // стрелка в кружке 2
 	document.querySelector(".slide5__main").style.cssText = "opacity: 0"; // колонка	
 	document.querySelector(".slide5__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
-	document.querySelector(".slide5__circle-out").style.cssText = "opacity: 0"; // пульсация
+	document.querySelector(".slide5__circle-gif").style.cssText = "opacity: 0"; // пульсация
+	document.querySelector(".slide5__bigdot-two-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 2
+	document.querySelector(".slide5__bigdot-three-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 3
+	document.querySelector(".slide5__bigdot-four-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 4
+	document.querySelector(".slide5__bigdot-five-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 5
+	document.querySelector(".slide5__root1-middle").classList.remove("animation__move-img5"); // для анимации корней
 }
 
 let fadeSixthSlide = () => {
@@ -545,7 +566,11 @@ let fadeSixthSlide = () => {
 	document.querySelector(".slide6__top-container-line").style.cssText = "opacity: 0"; // полоска около зага
 	document.querySelector(".slide6__top-container-title").style.cssText = "opacity: 0"; // заг
 	document.querySelector(".slide6__circle-img").style.cssText = "opacity: 0"; // кружок с пульсацией
-	document.querySelector(".slide6__circle-out").style.cssText = "opacity: 0"; // пульсация
+	document.querySelector(".slide6__circle-gif").style.cssText = "opacity: 0"; // пульсация
+	document.querySelector(".slide6__bigdot-three-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 3
+	document.querySelector(".slide6__bigdot-four-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 4
+	document.querySelector(".slide6__bigdot-five-pulse").classList.remove("animation-bigdot-pulse"); // анимация точки 5
+	document.querySelector(".slide6__root1-senior").classList.remove("animation__move-img6"); // для анимации корней
 }
 
 let fadeSeventhSlide = () => {
@@ -558,6 +583,9 @@ let fadeSeventhSlide = () => {
 	document.querySelector(".slide7__main").style.cssText = "opacity: 0"; // колонка	
 	document.querySelector(".slide7__top-container-line").style.cssText = "opacity: 0"; // полоска около зага
 	document.querySelector(".slide7__top-container-title").style.cssText = "opacity: 0"; // заг
+	document.querySelector(".slide7__dot-left-pulse").classList.remove("animation-dot2-pulse"); // анимация точки 
+	document.querySelector(".slide7__dot-right-pulse").classList.remove("animation-dot2-pulse"); // анимация точки 
+	document.querySelector(".slide7__root1-senior").classList.remove("animation__move-img7"); // для анимации корней
 }
 
 let fadeEigthSlide = () => {
@@ -571,6 +599,7 @@ let fadeEigthSlide = () => {
 	document.querySelector(".slide8__poly").style.opacity = 0; // пентагон
 	document.querySelector(".slide8_layer3__nuts").style.cssText = "opacity: 0"; // желудь
 	document.querySelector(".slide8_layer3__leaf3").style.cssText = "opacity: 0"; // левый лист
+	document.querySelector(".slide8__root1-senior").classList.remove("animation__move-img8"); // для анимации корней
 
 	document.querySelector(".slide8__main-left").style.cssText = "opacity: 0"; // левая 
 	document.querySelector(".slide8__text-left").style.cssText = "transform: translate3d(0, 0, 0px);backdrop-filter: blur(0px) opacity(0);background-color: rgba(255, 255, 255, 0);"; // левая блюр

@@ -156,6 +156,13 @@ let popupBgMenu = document.querySelector('.popupMenu__bg');
 let popupMenu = document.querySelector('.popupMenu');
 let closePopupButtonMenu = document.querySelector('.close-popupMenu');
 let openPopupButtonMenu = document.querySelector('#menu');
+let openPopupButtonMenu2 = document.querySelector('#menuBottom');
+
+openPopupButtonMenu2.addEventListener('click', (e) => {
+    e.preventDefault();
+    popupBgMenu.classList.add('active');
+    popupMenu.classList.add('active');
+})
 
 openPopupButtonMenu.addEventListener('click', (e) => {
     e.preventDefault();

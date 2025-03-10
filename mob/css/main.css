@@ -106,6 +106,10 @@ body {
 	color: #000000;
 }
 
+.button {
+	background-color: transparent;
+}
+
 .link-blue {
 	color: var(--dark-blue);
 	border-bottom: 1px solid var(--dark-blue);

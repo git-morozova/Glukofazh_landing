@@ -60,7 +60,7 @@
     pointer-events: none;
     transition: 0.5s all;
     z-index: 100;
-    overflow:auto;
+    overflow: auto;
 }
 
 .popupFacts__bg.active {
@@ -129,23 +129,28 @@
     line-height: 18px;
     padding: 29px 0 47px 0;
 }
+
 .popupFacts__main {
     width: 267px;
     margin: 0 auto 24px auto;
     gap: 36px;
 }
+
 .popupFacts__img {
     width: 80px;
 }
+
 .popupFacts__text {
     padding-top: 3px;
 }
+
 .popupFacts__leaf1 {
     position: absolute;
     top: 556px;
     left: 250px;
     width: 54px;
 }
+
 .popupFacts__leaf2 {
     position: absolute;
     top: 447px;
@@ -164,7 +169,7 @@
     pointer-events: none;
     transition: 0.5s all;
     z-index: 100;
-    overflow:auto;
+    overflow: auto;
 }
 
 .popupMenu__bg.active {
@@ -201,11 +206,13 @@
     line-height: 18px;
     padding: 55px 0px 41px 0px;
 }
+
 .popupMenu__main {
     width: 267px;
     margin: 0 auto 24px auto;
     gap: 36px;
 }
+
 .popupMenu__title {
     font-size: 16px;
     font-weight: 700;
@@ -218,6 +225,7 @@
     padding: 15px 0 0 0;
     gap: 24px;
 }
+
 .popupMenu__link {
     font-size: 20px;
     font-weight: 700;
@@ -226,27 +234,31 @@
     border-radius: 50px;
     margin: 0 0 8px 0;
     border: 2px solid var(--dark-blue);
-   
+
     color: var(--white);
     background-color: var(--dark-blue);
 }
-.popupMenu__link.active{
+
+.popupMenu__link.active {
     color: var(--dark-blue);
     background-color: var(--white);
 }
+
 .popupMenu__link1 {
-    width: 94px;  
-    font-size: 20px; 
+    width: 94px;
+    font-size: 20px;
 }
 
 .popupMenu__link2 {
-    width: 294px;  
-    font-size: 24px;  
+    width: 294px;
+    font-size: 24px;
 }
+
 .popupMenu__link3 {
-    width: 183px;  
-    font-size: 24px;  
+    width: 183px;
+    font-size: 24px;
 }
+
 .popupMenu__text {
     margin: 20px 0;
 }
@@ -262,35 +274,36 @@
 
 
 .qr-close {
-    height:0px;
-    transition:height 1s ease-out;
+    height: 0px;
+    transition: height 1s ease-out;
     -webkit-transform: scaleY(0);
-	-o-transform: scaleY(0);
-	-ms-transform: scaleY(0);
-	transform: scaleY(0);
-    float:left;
-    display:block;
-    
-    
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+
+
 }
+
 .qr-open {
     background-color: #fff;
     width: 329px;
-    display:block;
+    display: block;
     -webkit-transform: scaleY(1);
-	-o-transform: scaleY(1);
-	-ms-transform: scaleY(1);
-	transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
     -webkit-transform-origin: top;
-	-o-transform-origin: top;
-	-ms-transform-origin: top;
-	transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
 
-	-webkit-transition: -webkit-transform 0.4s ease-out;
-	-o-transition: -o-transform 0.4s ease;
-	-ms-transition: -ms-transform 0.4s ease;
-	transition: transform 0.4s ease;
-        box-sizing: border-box;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
 }
 
 .qr-img {
