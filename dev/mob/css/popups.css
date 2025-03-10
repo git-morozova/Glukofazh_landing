@@ -1,0 +1,312 @@
+/* графики */
+.popupGr__bg {
+    position: fixed;
+    top: 0;
+    width: 375px;
+    height: 100vh;
+    background: #fff;
+    background-image: url(../img/popups/popup-back.png);
+    background-repeat: no-repeat;
+    padding: 0px 0 0 0;
+    background-size: 100% 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 100;
+}
+
+.popupGr__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popupGr {
+    width: 375px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.popupGr.active {
+    transition: 0.5s all;
+}
+
+.close-popupGr {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
+    z-index:100;
+}
+
+.popupGr-img {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* интересные факты */
+.popupFacts__bg {
+    position: fixed;
+    top: 0;
+    width: 375px;
+    height: 100vh;
+    background: rgba(120, 139, 178, 0.9);
+    backdrop-filter: blur(4px);
+    background-repeat: no-repeat;
+    padding: 0px 0 0 0;
+    background-size: 100% 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 100;
+    overflow: auto;
+}
+
+.popupFacts__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popupFacts {
+    width: 375px;
+    padding: 25px;
+    transition: 0.5s all;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.popupFacts.active {
+    transition: 0.5s all;
+}
+
+.close-popupFacts {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
+}
+
+.popup_button {
+    background-image: url(../img/buttons/rainbow_pressed.png);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    display: flex;
+    background-repeat: no-repeat;
+    padding: 0px 0 0 0;
+    background-size: contain;
+    width: 133px;
+    height: 18px;
+    position: relative;
+    border: 0;
+}
+
+.popup_button-arrow-wh {
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    width: 7px;
+}
+
+.popup_button-text {
+    position: absolute;
+    left: 16px;
+    width: 117px;
+}
+
+.popupFacts__header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 29px 0 47px 0;
+}
+
+.popupFacts__main {
+    width: 267px;
+    margin: 0 auto 24px auto;
+    gap: 36px;
+}
+
+.popupFacts__img {
+    width: 80px;
+}
+
+.popupFacts__text {
+    padding-top: 3px;
+}
+
+.popupFacts__leaf1 {
+    position: absolute;
+    top: 556px;
+    left: 250px;
+    width: 54px;
+}
+
+.popupFacts__leaf2 {
+    position: absolute;
+    top: 447px;
+    left: 250px;
+    width: 54px;
+}
+
+/* меню */
+.popupMenu__bg {
+    position: fixed;
+    top: 0;
+    width: 375px;
+    height: 100vh;
+    background: rgb(217, 217, 217);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 100;
+    overflow: auto;
+}
+
+.popupMenu__bg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.popupMenu {
+    width: 375px;
+    padding: 22px;
+    transition: 0.5s all;
+    color: var(--black);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.popupMenu.active {
+    transition: 0.5s all;
+}
+
+.close-popupMenu {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
+}
+
+.popupMenu__header {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 55px 0px 41px 0px;
+}
+
+.popupMenu__main {
+    width: 267px;
+    margin: 0 auto 24px auto;
+    gap: 36px;
+}
+
+.popupMenu__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 18px 0 0 0;
+    border-top: 1px solid var(--dark-blue);
+}
+
+.popupMenu__links {
+    padding: 15px 0 0 0;
+    gap: 24px;
+}
+
+.popupMenu__link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 0 8px 0;
+    border: 2px solid var(--dark-blue);
+
+    color: var(--white);
+    background-color: var(--dark-blue);
+}
+
+.popupMenu__link.active {
+    color: var(--dark-blue);
+    background-color: var(--white);
+}
+
+.popupMenu__link1 {
+    width: 94px;
+    font-size: 20px;
+}
+
+.popupMenu__link2 {
+    width: 294px;
+    font-size: 24px;
+}
+
+.popupMenu__link3 {
+    width: 183px;
+    font-size: 24px;
+}
+
+.popupMenu__text {
+    margin: 20px 0;
+}
+
+.popupMenu__leaf {
+    position: absolute;
+    top: 593px;
+    left: 167px;
+    width: 208px;
+    z-index: -1;
+}
+
+
+
+.qr-close {
+    height: 0px;
+    transition: height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+
+
+}
+
+.qr-open {
+    background-color: #fff;
+    width: 329px;
+    display: block;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+}
+
+.qr-img {
+    width: 329px;
+}
