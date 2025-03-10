@@ -571,7 +571,7 @@ a:hover {
 }
 
 .overlay-qr-show {
-	display: block;
+	display: block !important;
 }
 
 /*фикс слои*/
